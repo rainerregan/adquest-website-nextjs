@@ -26,9 +26,9 @@ const StepSection = () => {
         </div>
 
         <div className='relative'>
-          <Image src={illustKoin} alt='Image' className='absolute top-0 right-[50px] translate-y-[-55%] z-[3]' />
-          <Image width={120} height={120} src={illustKoin} alt='Image' className='absolute bottom-0 left-[50px] translate-y-[55%] z-[3]' />
-          <Image src={illustDino} alt='Image' className='absolute bottom-0 right-[50px] translate-y-[20%] z-[3] w-[350px]' />
+          <Image src={illustKoin} alt='Image' className='absolute top-0 right-[50px] translate-y-[-55%] w-[100px] md:w-[150px] z-[3]' />
+          <Image src={illustKoin} alt='Image' className='absolute bottom-[20px] md:bottom-0 left-[-30px] md:left-[50px] md:translate-y-[55%] w-[80px] md:w-[120px] z-[3]' />
+          <Image src={illustDino} alt='Image' className='absolute bottom-0 right-[50px] translate-y-[20%] z-[3] w-[200px] md:w-[350px]' />
 
           <div className='rounded-[30px] text-white relative overflow-clip'>
             <div className='w-full h-full absolute left-0 top-0 z-[-1]'>
@@ -41,8 +41,8 @@ const StepSection = () => {
               />
             </div>
 
-            <div className='flex flex-col justify-center p-[80px] z-[2] bg-main-gray-2/50'>
-              <h2 className='h2 z-[1]'>
+            <div className='flex flex-col justify-center px-[40px] py-[100px] md:p-[80px] z-[2] bg-main-gray-2/50'>
+              <h2 className='text-2xl md:text-3xl lg:text-6xl z-[1] mb-4'>
                 Nikmati Serunya Mendapatkan Keuntungan dari Bermain Games di <span className='text-main-green'>AdQuest</span> Bersama <span className='text-main-green'>300,000+</span> Players Lainnya!
               </h2>
 
