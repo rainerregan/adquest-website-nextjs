@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <nav className='shadow-lg sticky top-0 z-50 bg-white'>
-      <div className='flex justify-between items-center h-[72px] max-w-7xl m-auto px-[24px]'>
+      <div className='flex justify-between items-center h-[64px] md:h-[72px] max-w-7xl m-auto px-[24px]'>
         <AppIcon />
 
         {/* Desktop */}

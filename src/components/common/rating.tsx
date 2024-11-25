@@ -7,9 +7,9 @@ interface RatingProps {
 
 const Rating: React.FC<RatingProps> = ({ }) => {
   return (
-    <div className='flex items-center gap-4 '>
+    <div className='flex items-center gap-2 md:gap-4 '>
       <p className='m-0 text-main-gray font-bold'>4.3</p>
-      <div className='flex items-center gap-2'>
+      <div className='flex items-center gap-1 md:gap-2'>
         {Array.from({ length: 5 }).map((_, index) => (
           <TbStarFilled key={index} className='text-rating-yellow' />
         ))}

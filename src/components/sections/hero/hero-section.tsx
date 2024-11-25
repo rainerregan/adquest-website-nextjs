@@ -6,12 +6,12 @@ import { twMerge } from 'tailwind-merge'
 
 const HeroSection = () => {
   return (
-    <div className='bg-white pt-[70px] lg:pt-[30px] rounded-b-[30px]'>
+    <div className='bg-white pt-[50px] md:pt-[70px] lg:pt-[30px] rounded-b-[20px] md:rounded-b-[30px]'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
         <div className='flex flex-col lg:flex-row items-center gap-[20px] pb-[80px] lg:pb-[120px]'>
           <div className='flex-1 w-full md:w-3/4 lg:w-full flex flex-col items-center lg:items-start'>
             <h1 className={twMerge(
-              'font-bold flex flex-col items-center lg:items-start mb-[24px] lg:mb-[50px]', // Global
+              'font-bold flex flex-col items-center lg:items-start mb-[36px] lg:mb-[50px]', // Global
               'text-center lg:text-left', // Text Alignment
               'text-[28px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
               'leading-[40px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </h1>
 
             <p className='text-base lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
-            <div className='flex items-center gap-8'>
+            <div className='flex items-center gap-4 md:gap-8'>
               <button className='bg-main-green text-white font-semibold px-6 py-3 rounded-lg'>Google Play Download</button>
               <Rating />
             </div>

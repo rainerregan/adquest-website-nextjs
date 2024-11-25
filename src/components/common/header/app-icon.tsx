@@ -4,7 +4,9 @@ import Image from 'next/image';
 
 const AppIcon = () => {
   return (
-    <Image src={appIcon} alt='Adquest Logo' width={120} height={30} />
+    <div className='w-[100px] lg:w-[110px] h-[40px] relative'>
+      <Image src={appIcon} alt='Adquest Logo' fill objectFit='contain' className='w-full h-full' />
+    </div>
   )
 }
 
