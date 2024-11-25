@@ -28,7 +28,7 @@ const HeroSection = () => {
               </div>
             </h1>
 
-            <p className='text-base lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
+            <p className='text-base text-center lg:text-left lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
             <DownloadRating />
 
           </div>
