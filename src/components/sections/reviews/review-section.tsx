@@ -2,6 +2,8 @@ import { circlePattern1, circlePattern2 } from '@/components/common/illustration
 import Image from 'next/image'
 import ControlButton from './control-button'
 import ReviewCard from './review-card'
+import { twMerge } from 'tailwind-merge'
+import DownloadRating from '@/components/common/download-rating'
 
 export interface Review {
   name: string
@@ -56,21 +58,29 @@ const ReviewSection = () => {
         className=' absolute right-0 top-0 translate-x-[50%] translate-y-[-30%] z-0'
       />
 
-      <div className='section py-[100px] flex flex-col items-center relative z-[2]'>
+      <div className='max-w-7xl mx-auto lg:px-[48px] py-[100px] flex flex-col items-center relative z-[2]'>
         <h2 className='h2 text-white'>Cerita Questies</h2>
 
         {/* Reviews */}
-        <div className='grid grid-cols-2 gap-8 mt-8 mb-8'>
-          {dummyReviews.map((review, index) => (
-            <ReviewCard key={index} review={review} />
-          ))}
+        <div className='w-full overflow-scroll mt-4 lg:mt-8 mb-8'>
+          <div className={twMerge(
+            'flex gap-4 w-fit px-[24px]',
+            'md:grid md:grid-cols-2 md:gap-6 lg:gap-8 md:px-0',
+          )}>
+            {dummyReviews.map((review, index) => (
+              <ReviewCard key={index} review={review} />
+            ))}
+          </div>
         </div>
 
         {/* Controls */}
-        <div className='flex gap-4'>
+        <div className='flex gap-4 mb-8'>
           <ControlButton type='prev' disabled={true} />
           <ControlButton type='next' disabled={false} />
         </div>
+
+        {/* GPLAY */}
+        <DownloadRating showRating={false} />
       </div>
     </div>
   )

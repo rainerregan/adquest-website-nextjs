@@ -14,7 +14,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   const starEmpty = 5 - starFilled;
 
   return (
-    <div className='bg-white p-[50px] shadow-md rounded-[20px] flex flex-col gap-4'>
+    <div className='bg-white p-[36px] lg:p-[50px] min-w-[300px] shadow-md rounded-[20px] flex flex-col gap-4'>
       <div className='flex gap-1'>
         {[...Array(starFilled)].map((_, index) => (
           <TbStarFilled key={index} className='text-rating-yellow' />
@@ -23,11 +23,11 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           <TbStar key={index} className='text-rating-yellow' />
         ))}
       </div>
-      <p>{review.review}</p>
+      <p className='text-sm md:text-base'>{review.review}</p>
 
       <div>
         <h3 className='font-bold'>{review.name}</h3>
-        <p>{review.orgainzation}</p>
+        <p className='text-sm md:text-base'>{review.orgainzation}</p>
       </div>
     </div>
   );
