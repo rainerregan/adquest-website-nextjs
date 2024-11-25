@@ -10,12 +10,12 @@ const StepSection = () => {
       <div className='section flex flex-col items-center'>
         <h2 className='h2 w-full md:w-1/2 text-balance !text-center'>Jelajahi <span className='text-main-green'>dan Menangkan</span></h2>
 
-        <div className='flex items-center justify-between w-full mt-12 mb-[150px]'>
+        <div className='flex flex-col md:flex-row gap-4 items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
           <div className='flex-1'>
             Steps
           </div>
 
-          <div className='w-1/3'>Illust</div>
+          <div className='w-full md:w-1/3'>Illust</div>
 
           <div className='flex-1'>
             <p className='mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!</p>
