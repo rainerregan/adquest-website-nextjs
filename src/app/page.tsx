@@ -1,11 +1,11 @@
+import Cta1Section from "@/components/sections/cta-1/cta-1-section";
 import HeroSection from "@/components/sections/hero/hero-section";
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="home overflow-x-hidden">
       <HeroSection />
-
-      asdfsf
+      <Cta1Section />
     </div>
   )
 }

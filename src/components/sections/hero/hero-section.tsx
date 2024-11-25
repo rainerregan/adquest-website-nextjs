@@ -1,27 +1,34 @@
 import { heroIllustration } from '@/components/common/illustration'
 import Rating from '@/components/common/rating'
 import Image from 'next/image'
-import React from 'react'
-import CounterNumberItem from './counter/counter-number-item'
+import CounterSection from './counter/counter-section'
+import { twMerge } from 'tailwind-merge'
 
 const HeroSection = () => {
   return (
-    <div className='bg-white pt-[30px] rounded-b-[30px]'>
-      <div className='max-w-7xl mx-auto relative'>
-        <div className='flex items-center gap-[20px] pb-[100px]'>
-          <div className='flex-1'>
-            <h1 className='text-[50px] xl:text-[64px] font-bold leading-[66px] xl:leading-[76px] flex flex-col mb-[50px]'>
-              <span>Dapatkan hadiah uang tunai dari main mobile games</span>
-              <span></span>
-              <div className='flex gap-4 items-center'>
-                <span>untuk</span>
-                <div className='text-[44px] xl:text-[54px] overflow-hidden leading-none text-white hero-dynamic-text bg-main-green w-fit px-3 py-1 h-fit rounded-lg'>
-                  <span className='text-nowrap'>Belanja Online</span>
+    <div className='bg-white pt-[70px] lg:pt-[30px] rounded-b-[30px]'>
+      <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
+        <div className='flex flex-col lg:flex-row items-center gap-[20px] pb-[80px] lg:pb-[120px]'>
+          <div className='flex-1 w-full md:w-3/4 lg:w-full flex flex-col items-center lg:items-start'>
+            <h1 className={twMerge(
+              'font-bold flex flex-col items-center lg:items-start mb-[24px] lg:mb-[50px]', // Global
+              'text-center lg:text-left', // Text Alignment
+              'text-[28px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
+              'leading-[40px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
+            )}>
+              <span>Dapatkan hadiah <span className='text-main-green break-normal'>uang tunai</span> dari main mobile games <span className='lg:hidden'>untuk</span></span>
+              <div className='flex flex-col lg:flex-row lg:gap-4 items-center h-fit'>
+                <span className='hidden lg:block'>untuk</span>
+                <div className={twMerge(
+                  'overflow-hidden leading-none text-white hero-dynamic-text bg-main-green w-fit px-3 h-fit rounded-lg mt-1',
+                  'text-[24px] sm:text-[34px] lg:text-[40px] xl:text-[54px]', // Font Size
+                )}>
+                  <span className='text-nowrap leading-none'>Belanja Online</span>
                 </div>
               </div>
             </h1>
 
-            <p className='text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
+            <p className='text-base lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
             <div className='flex items-center gap-8'>
               <button className='bg-main-green text-white font-semibold px-6 py-3 rounded-lg'>Google Play Download</button>
               <Rating />
@@ -29,36 +36,20 @@ const HeroSection = () => {
 
           </div>
 
-          <div className='w-1/3 xl:w-[40%] text-right flex items-center justify-end'>
-            <Image
-              src={heroIllustration}
-              width={550}
-              height={350}
-              alt='hero illustration'
-            />
+          <div className='w-full lg:w-1/3 xl:w-[40%] text-right flex items-center justify-end'>
+            <div className='w-full h-[400px] sm:h-[400px] lg:h-[650px] relative'>
+              <Image
+                src={heroIllustration}
+                objectFit="contain"
+                fill
+                alt='hero illustration'
+                className='w-full h-full absolute'
+              />
+            </div>
           </div>
         </div>
 
-        <div className='absolute left-0 bottom-0 translate-y-[50%] w-full bg-main-black px-12 py-8 rounded-[25px] text-white flex flex-col justify-center items-center'>
-          <h2 className='text-center mb-4 text-4xl'>Total Hadiah Uang Tunai Diberikan Hingga Saat Ini</h2>
-          <div className='flex gap-8 items-center w-fit'>
-            <span className='counter-text'>Rp</span>
-            <div className='flex-1 flex gap-[20px] justify-between items-center'>
-              <CounterNumberItem number={1} />
-              <CounterNumberItem number={0} />
-              <CounterNumberItem number={0} />
-              <span className='counter-text__coma'>,</span>
-              <CounterNumberItem number={0} />
-              <CounterNumberItem number={0} />
-              <CounterNumberItem number={0} />
-              <span className='counter-text__coma'>,</span>
-              <CounterNumberItem number={0} />
-              <CounterNumberItem number={0} />
-              <CounterNumberItem number={0} />
-            </div>
-            <span className='counter-text'>+</span>
-          </div>
-        </div>
+        <CounterSection />
       </div>
     </div>
   )

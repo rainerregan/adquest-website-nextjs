@@ -10,12 +10,15 @@ const Header = () => {
   ]
 
   return (
-    <nav className='flex justify-between items-center h-[72px] shadow-lg sticky top-0 z-50 px-[100px] bg-white'>
-      <AppIcon />
+    <nav className='shadow-lg sticky top-0 z-50 bg-white'>
+      <div className='flex justify-between items-center h-[72px] max-w-7xl m-auto px-[24px]'>
+        <AppIcon />
 
-      <div className='right-menu flex gap-12 items-center font-semibold text-main-green'>
-        <HeaderMenu items={headerMenu} />
-        <LangSelector />
+        {/* Desktop */}
+        <div className='hidden lg:flex right-menu gap-12 items-center font-semibold text-main-green'>
+          <HeaderMenu items={headerMenu} />
+          <LangSelector />
+        </div>
       </div>
     </nav>
   )

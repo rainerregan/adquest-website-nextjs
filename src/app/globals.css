@@ -26,9 +26,9 @@ h2 {
 }
 
 .counter-text {
-  @apply text-5xl font-bold font-montserrat
+  @apply text-lg md:text-2xl lg:text-3xl xl:text-5xl font-bold font-montserrat
 }
 
 .counter-text__coma {
-  @apply text-[90px] leading-none font-montserrat font-bold 
+  @apply text-[30px] md:text-[70px] xl:text-[90px] leading-none font-montserrat font-bold 
 }
