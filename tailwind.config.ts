@@ -13,6 +13,7 @@ export default {
         "main-green-background": "#38C676",
         "main-black": "#2B332E",
         "main-gray": "#585858",
+        "main-gray-2": "#2E2944",
         "rating-yellow": "#FFB200",
         "rating-yellow-light": "#FFE74D",
       },

@@ -11,7 +11,7 @@ const Cta1Section = () => {
           priority
           src={circlePattern1}
           alt="pattern"
-          className=' absolute left-0 bottom-0 translate-x-[-50%] translate-y-[50%] -mb-20'
+          className=' absolute left-0 bottom-0 translate-x-[-50%] translate-y-[50%] z-0 -mb-20'
         />
       </div>
 

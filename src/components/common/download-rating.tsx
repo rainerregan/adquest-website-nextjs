@@ -6,10 +6,12 @@ import { gPlayDownload } from './illustration'
 
 interface DownloadRatingProps {
   ratingProps?: RatingProps;
+  showRating?: boolean;
 }
 
 const DownloadRating: React.FC<DownloadRatingProps> = ({
-  ratingProps
+  ratingProps,
+  showRating = true
 }) => {
   return (
     <div className='flex items-center gap-4 md:gap-8'>
@@ -22,7 +24,9 @@ const DownloadRating: React.FC<DownloadRatingProps> = ({
           className='h-full w-full'
         />
       </Link>
-      <Rating {...ratingProps} />
+      {showRating && (
+        <Rating {...ratingProps} />
+      )}
     </div>
   )
 }

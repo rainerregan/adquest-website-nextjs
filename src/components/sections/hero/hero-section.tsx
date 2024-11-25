@@ -6,7 +6,7 @@ import CounterSection from './counter/counter-section'
 
 const HeroSection = () => {
   return (
-    <div className='bg-white pt-[50px] md:pt-[70px] lg:pt-[30px] rounded-b-[20px] z-20 md:rounded-b-[30px] relative'>
+    <div className='bg-white pt-[50px] md:pt-[70px] lg:pt-[30px] section-rounded__bottom z-[1] relative'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
         <div className='flex flex-col lg:flex-row items-center gap-[20px] pb-[80px] lg:pb-[120px]'>
           <div className='flex-1 w-full md:w-3/4 lg:w-full flex flex-col items-center lg:items-start'>
