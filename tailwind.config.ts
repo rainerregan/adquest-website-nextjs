@@ -10,10 +10,15 @@ export default {
     extend: {
       colors: {
         "main-green": "#1FB661",
+        "main-green-background": "#38C676",
         "main-black": "#2B332E",
         "main-gray": "#585858",
         "rating-yellow": "#FFB200",
       },
+    },
+    fontFamily: {
+      montserrat: ['var(--font-montserrat)'],
+      inter: ['var(--font-inter)'],
     },
   },
   plugins: [],
