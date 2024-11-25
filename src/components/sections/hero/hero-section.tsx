@@ -1,8 +1,9 @@
-import { heroIllustration } from '@/components/common/illustration'
+import { gPlayDownload, heroIllustration } from '@/components/common/illustration'
 import Rating from '@/components/common/rating'
 import Image from 'next/image'
 import CounterSection from './counter/counter-section'
 import { twMerge } from 'tailwind-merge'
+import Link from 'next/link'
 
 const HeroSection = () => {
   return (
@@ -13,15 +14,15 @@ const HeroSection = () => {
             <h1 className={twMerge(
               'font-bold flex flex-col items-center lg:items-start mb-[36px] lg:mb-[50px]', // Global
               'text-center lg:text-left', // Text Alignment
-              'text-[28px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
-              'leading-[40px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
+              'text-[36px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
+              'leading-[50px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
             )}>
               <span>Dapatkan hadiah <span className='text-main-green break-normal'>uang tunai</span> dari main mobile games <span className='lg:hidden'>untuk</span></span>
               <div className='flex flex-col lg:flex-row lg:gap-4 items-center h-fit'>
                 <span className='hidden lg:block'>untuk</span>
                 <div className={twMerge(
                   'overflow-hidden leading-none text-white hero-dynamic-text bg-main-green w-fit px-3 h-fit rounded-lg mt-1',
-                  'text-[24px] sm:text-[34px] lg:text-[40px] xl:text-[54px]', // Font Size
+                  'text-[36px] sm:text-[34px] lg:text-[40px] xl:text-[54px]', // Font Size
                 )}>
                   <span className='text-nowrap leading-none'>Belanja Online</span>
                 </div>
@@ -30,7 +31,15 @@ const HeroSection = () => {
 
             <p className='text-base lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
             <div className='flex items-center gap-4 md:gap-8'>
-              <button className='bg-main-green text-white font-semibold px-6 py-3 rounded-lg'>Google Play Download</button>
+              <Link href="#" className='h-[50px] w-[140px] relative'>
+                <Image
+                  src={gPlayDownload}
+                  alt='Google Play Download'
+                  fill
+                  objectFit='contain'
+                  className='h-full w-full'
+                />
+              </Link>
               <Rating />
             </div>
 
