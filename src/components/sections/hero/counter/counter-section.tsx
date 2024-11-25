@@ -3,7 +3,7 @@ import CounterNumberItem from './counter-number-item'
 
 const CounterSection = () => {
   return (
-    <div className='absolute translate-y-[50%] right-0 left-0 bottom-0 w-full max-w-7xl mx-auto px-[24px] lg:px-[48px]'>
+    <div className='absolute translate-y-[50%] z-[1] right-0 left-0 bottom-0 w-full max-w-7xl mx-auto px-[24px] lg:px-[48px]'>
       <div className=' bg-main-black px-4 lg:px-12 py-4 md:py-8 rounded-[20px] lg:rounded-[25px] text-white flex flex-col justify-center items-center'>
         <h2 className='text-center mb-2 lg:mb-4 text-lg md:text-2xl lg:text-3xl xl:text-4xl text-balance'>Total Hadiah Uang Tunai Diberikan Hingga Saat Ini</h2>
         <div className='flex gap-1 md:gap-4 xl:gap-8 items-center w-full sm:w-fit mb-2'>

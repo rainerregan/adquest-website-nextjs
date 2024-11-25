@@ -14,6 +14,7 @@ export default {
         "main-black": "#2B332E",
         "main-gray": "#585858",
         "rating-yellow": "#FFB200",
+        "rating-yellow-light": "#FFE74D",
       },
     },
     fontFamily: {

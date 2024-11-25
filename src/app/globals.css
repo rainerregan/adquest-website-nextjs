@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -13,7 +14,12 @@ body {
   @apply font-inter text-main-black;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-montserrat;
 }
 
@@ -30,5 +36,9 @@ h2 {
 }
 
 .counter-text__coma {
-  @apply text-[30px] md:text-[70px] xl:text-[90px] leading-none font-montserrat font-bold 
+  @apply text-[30px] md:text-[70px] xl:text-[90px] leading-none font-montserrat font-bold
+}
+
+.h2 {
+  @apply text-center lg:text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8 text-balance
 }

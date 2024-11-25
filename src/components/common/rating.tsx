@@ -1,17 +1,22 @@
 import React from 'react';
-import { TbStar, TbStarFilled } from 'react-icons/tb';
+import { TbStarFilled } from 'react-icons/tb';
+import { twMerge } from 'tailwind-merge';
 
-interface RatingProps {
-
+export interface RatingProps {
+  textClassName?: string;
+  starClassName?: string;
 }
 
-const Rating: React.FC<RatingProps> = ({ }) => {
+const Rating: React.FC<RatingProps> = ({
+  textClassName,
+  starClassName
+}) => {
   return (
     <div className='flex items-center gap-2 md:gap-4 '>
-      <p className='m-0 text-main-gray font-bold'>4.3</p>
-      <div className='flex items-center gap-1 md:gap-2'>
+      <p className={twMerge('m-0 text-main-gray font-bold', textClassName)}>4.3</p>
+      <div className='flex items-center gap-1 md:gap-1'>
         {Array.from({ length: 5 }).map((_, index) => (
-          <TbStarFilled key={index} className='text-rating-yellow' />
+          <TbStarFilled key={index} className={twMerge('text-rating-yellow', starClassName)} />
         ))}
       </div>
     </div>

@@ -1,13 +1,12 @@
-import { gPlayDownload, heroIllustration } from '@/components/common/illustration'
-import Rating from '@/components/common/rating'
+import DownloadRating from '@/components/common/download-rating'
+import { heroIllustration } from '@/components/common/illustration'
 import Image from 'next/image'
-import CounterSection from './counter/counter-section'
 import { twMerge } from 'tailwind-merge'
-import Link from 'next/link'
+import CounterSection from './counter/counter-section'
 
 const HeroSection = () => {
   return (
-    <div className='bg-white pt-[50px] md:pt-[70px] lg:pt-[30px] rounded-b-[20px] md:rounded-b-[30px]'>
+    <div className='bg-white pt-[50px] md:pt-[70px] lg:pt-[30px] rounded-b-[20px] z-20 md:rounded-b-[30px] relative'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
         <div className='flex flex-col lg:flex-row items-center gap-[20px] pb-[80px] lg:pb-[120px]'>
           <div className='flex-1 w-full md:w-3/4 lg:w-full flex flex-col items-center lg:items-start'>
@@ -30,18 +29,7 @@ const HeroSection = () => {
             </h1>
 
             <p className='text-base lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
-            <div className='flex items-center gap-4 md:gap-8'>
-              <Link href="#" className='h-[50px] w-[140px] relative'>
-                <Image
-                  src={gPlayDownload}
-                  alt='Google Play Download'
-                  fill
-                  objectFit='contain'
-                  className='h-full w-full'
-                />
-              </Link>
-              <Rating />
-            </div>
+            <DownloadRating />
 
           </div>
 
