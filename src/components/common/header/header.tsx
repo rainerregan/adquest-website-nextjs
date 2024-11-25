@@ -10,7 +10,7 @@ const Header = () => {
   ]
 
   return (
-    <nav className='flex justify-between items-center h-[72px] shadow-lg sticky top-0 px-[100px] bg-white'>
+    <nav className='flex justify-between items-center h-[72px] shadow-lg sticky top-0 z-50 px-[100px] bg-white'>
       <AppIcon />
 
       <div className='right-menu flex gap-12 items-center font-semibold text-main-green'>

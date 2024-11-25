@@ -20,3 +20,15 @@ h1, h2, h3, h4, h5, h6 {
 .home {
   @apply bg-main-green-background h-full w-full
 }
+
+h2 {
+  @apply text-3xl font-bold
+}
+
+.counter-text {
+  @apply text-5xl font-bold font-montserrat
+}
+
+.counter-text__coma {
+  @apply text-[90px] leading-none font-montserrat font-bold 
+}
