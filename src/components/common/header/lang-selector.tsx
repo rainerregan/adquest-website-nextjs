@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface LangSelectorProps {
-
-}
-
-const LangSelector: React.FC<LangSelectorProps> = ({ }) => {
+const LangSelector: React.FC = () => {
   return (
     <div>
       Lang Selector
