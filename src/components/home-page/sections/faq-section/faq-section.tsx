@@ -29,7 +29,7 @@ const FaqSection = () => {
   return (
     <div className='bg-white'>
       <div className='max-w-7xl mx-auto pt-[100px] pb-[150px] flex flex-col items-center px-[24px] lg:px-[48px]'>
-        <h2 className='h2 max-w-[800px] text-balance !text-center !mb-[100px]'><span>Frequently</span> Asked Questions</h2>
+        <h2 data-aos="fade-down" className='h2 max-w-[800px] text-balance !text-center !mb-[100px]'><span>Frequently</span> Asked Questions</h2>
 
         <div className='flex flex-col gap-[20px] w-full'>
           {faqs.map((faq, index) => (

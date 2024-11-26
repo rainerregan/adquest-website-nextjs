@@ -24,14 +24,14 @@ export const HeroSection = () => {
   ]
 
   return (
-    <div className='bg-white'>
+    <div className='bg-white' data-aos="fade-right">
       <div className='py-[80px] md:py-[150px] flex flex-col md:flex-row items-start max-w-7xl mx-auto px-[24px] md:px-[48px] gap-[48px] md:gap-[90px]'>
         <div className='md:w-[30%] flex flex-col gap-[24px]'>
           <h1 className='h1'>About <span>Us</span></h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ducimus nobis ex cupiditate nihil quae voluptatum delectus totam harum numquam error maiores nesciunt, optio aliquam dolorum quas recusandae molestias eaque.</p>
           <Button>Let&apos;s Talk</Button>
         </div>
-        <div className='flex-1 flex flex-col gap-[24px]'>
+        <div className='flex-1 flex flex-col gap-[24px]' data-aos="fade-right">
           {accordionData.map((faq, index) => (
             <FAQCard key={index} faq={faq} />
           ))}

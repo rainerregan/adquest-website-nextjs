@@ -59,7 +59,7 @@ const ReviewSection = () => {
       />
 
       <div className='max-w-7xl mx-auto lg:px-[48px] py-[100px] flex flex-col items-center relative z-[2]'>
-        <h2 className='h2 text-white'>Cerita Questies</h2>
+        <h2 className='h2 text-white' data-aos="fade-down">Cerita Questies</h2>
 
         {/* Reviews */}
         <div className='w-full overflow-scroll mt-4 lg:mt-8 mb-8'>

@@ -78,19 +78,20 @@ const StepSection = () => {
                 src={steps[currentStep].illustration}
                 alt="Illustration"
                 className="w-full h-full object-contain"
+                data-aos="fade-up"
               />
             </motion.div>
           </AnimatePresence>
 
-          <div className='flex-1'>
+          <div className='flex-1' data-aos="fade-left">
             <p className='mb-8'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!
+              {steps[currentStep].description}
             </p>
             <Button className='max-w-[200px] text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
           </div>
         </div>
 
-        <div className='relative'>
+        <div className='relative' data-aos="fade-up">
           {/* Floating Images */}
           <motion.div
             className='absolute top-[-50px] md:top-[-75px] right-[50px] w-[100px] md:w-[150px] z-[3] hover:cursor-pointer'

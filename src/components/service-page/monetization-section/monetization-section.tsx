@@ -41,7 +41,7 @@ export const MonetizationSection = () => {
       />
 
       <div className='max-w-7xl mx-auto py-[120px] px-[24px] lg:px-[48px] z-[2] relative'>
-        <div className='mb-[70px]'>
+        <div className='mb-[70px]' data-aos="fade-down">
           <h1 className='h3 !text-center'>Ready To Unlock The Full Ads <span>Revenue Potential</span> of Your Mobile Games?</h1>
         </div>
 
@@ -73,7 +73,9 @@ const MonetizationSectionItem: React.FC<MonetizationSectionItemProps> = ({
     <div className={twMerge(
       'flex items-center justify-between',
       item.direction === 'left' ? 'flex-col-reverse md:flex-row' : 'flex-col-reverse md:flex-row-reverse'
-    )}>
+    )}
+      data-aos={`fade-${item.direction}`}
+    >
       <div className='flex-1 flex flex-col gap-4 text-center md:text-left items-center md:items-baseline'>
         <h5 className='h5 text-main-green'>{item.title}</h5>
         <p className='text-sm md:text-base'>{item.description}</p>

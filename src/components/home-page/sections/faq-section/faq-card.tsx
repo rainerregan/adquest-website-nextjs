@@ -20,9 +20,6 @@ const FAQCard: React.FC<FAQCardProps> = ({ faq }) => {
   return (
     <motion.div
       className='w-full border-2 rounded-lg border-main-gray shadow-lg'
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
     >
       {/* Title */}
       <div className='flex justify-between items-start p-[20px] md:p-[24px] hover:cursor-pointer' onClick={toggleAccordion}>

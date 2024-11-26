@@ -45,7 +45,7 @@ const GamesAvailableSection = () => {
   return (
     <div className='bg-white relative z-[1] section-rounded__top overflow-hidden'>
       <div className='pt-[80px] md:pt-[120px] pb-[80px] mx-auto flex flex-col items-center gap-[20px] md:gap-[60px]'>
-        <h2 className='h2 text-center'>Games <span>Available</span></h2>
+        <h2 className='h2 text-center' data-aos="fade-down">Games <span>Available</span></h2>
 
         <div className='w-full overflow-hidden'>
           {/* Motion row for infinite animation */}

@@ -47,16 +47,18 @@ export const CollaborateSection = () => {
     <div className='bg-main-black-2'>
       <div className='bg-white section-rounded__top px-[24px] md:px-[48px]'>
         <div className='py-[100px] max-w-7xl mx-auto flex flex-col items-center'>
-          <div className='mb-[48px]'>
+          <div className='mb-[48px]' data-aos="fade-down">
             <h2 className='h2 text-center'>Let&apos;s <span>Collaborate</span></h2>
           </div>
 
           <div className={twMerge(
             'md:grid md:grid-cols-2 gap-[40px] mb-[48px]',
             'flex flex-col',
-          )}>
+          )}
+            data-aos="fade-down"
+          >
             {items.map((item, index) => (
-              <CollaborateSectionItem key={index} item={item} />
+              <CollaborateSectionItem data-aos="fade-down" data-aos-delay={index * 400} key={index} item={item} />
             ))}
           </div>
 
