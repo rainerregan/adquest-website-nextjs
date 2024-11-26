@@ -6,6 +6,7 @@ import gPlayDownload from '../../../public/images/misc/download_gplay.png'
 import ctaImage from '../../../public/images/stock-photo/cta_image.png'
 import illustKoin from '../../../public/images/illustration/illust_koin.svg'
 import illustDino from '../../../public/images/illustration/illust_dino.svg'
+import appLogoWhite from '../../../public/images/logo/adquest_logo_white.svg'
 
 export {
   heroIllustration,
@@ -15,5 +16,6 @@ export {
   circlePattern2,
   ctaImage,
   illustKoin,
-  illustDino
+  illustDino,
+  appLogoWhite,
 }
