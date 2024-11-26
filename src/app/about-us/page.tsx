@@ -1,3 +1,4 @@
+"use client"
 import { HeroSection } from '@/components/about-us-page/hero/hero-section'
 import React from 'react'
 

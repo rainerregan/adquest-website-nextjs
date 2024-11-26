@@ -4,9 +4,9 @@ import Button from '@/components/common/button';
 import DownloadRating from '@/components/common/download-rating';
 import { ctaImage, illustDino, illustKoin } from '@/components/common/illustration';
 import Steps from '@/components/common/step/steps';
-import { AnimatePresence, motion } from "framer-motion";
 import Image from 'next/image';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export interface Step {
   title: string;

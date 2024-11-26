@@ -1,3 +1,4 @@
+"use client";
 import { CollaborateSection } from '@/components/service-page/collaborate/collaborate-section'
 import { HeroSection } from '@/components/service-page/hero/hero-section'
 import { MonetizationSection } from '@/components/service-page/monetization-section/monetization-section'

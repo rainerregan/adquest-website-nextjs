@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 interface ButtonProps {
   children: React.ReactNode;

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import { motion } from 'motion/react';
 
 interface StepsProps {
   currentStep: number;

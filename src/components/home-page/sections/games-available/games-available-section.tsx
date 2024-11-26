@@ -1,5 +1,5 @@
 "use client";
-import { animate, motion, useMotionValue } from "framer-motion";
+import { motion, animate, useMotionValue } from 'motion/react';
 import { gameIcon1, gameIcon2, gameIcon3, gameIcon4, gameIcon5, gameIcon6, gameIcon7, gameIcon8, gameIcon9, gameIcon10 } from '@/assets/game-icons';
 import Button from '@/components/common/button';
 import Image from 'next/image';

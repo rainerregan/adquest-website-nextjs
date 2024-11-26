@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { TbChevronDown, TbChevronUp } from 'react-icons/tb';
-import { motion } from "framer-motion";
+import { motion } from 'motion/react';
 
 interface FAQ {
   question: string;
