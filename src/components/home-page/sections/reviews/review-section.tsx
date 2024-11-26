@@ -41,13 +41,13 @@ const ReviewSection = () => {
   ]
 
   return (
-    <div className='relative overflow-hidden'>
+    <div className='relative'>
       <div className="absolute w-full h-full overflow-hidden">
         <Image
           priority
           src={circlePattern1}
           alt="pattern"
-          className=' absolute left-0 bottom-0 translate-x-[-50%] translate-y-[50%] z-0 -mb-20'
+          className=' absolute left-0 bottom-0 translate-x-[-50%] translate-y-[50%] z-0'
         />
       </div>
 

@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   href,
 }) => {
   return (
-    <Link href={href ?? "/"} className={twMerge('px-4 py-2 block w-fit rounded bg-main-green text-white font-bold', className)}>
+    <Link href={href ?? "/"} className={twMerge('px-4 py-2 block w-fit rounded-lg bg-main-green text-white font-bold', className)}>
       {children}
     </Link>
   );
