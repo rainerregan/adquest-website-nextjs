@@ -29,7 +29,7 @@ const HeroSection = () => {
         <div className='md:w-[30%] flex flex-col gap-[24px]'>
           <h1 className='h1'>About <span>Us</span></h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus ducimus nobis ex cupiditate nihil quae voluptatum delectus totam harum numquam error maiores nesciunt, optio aliquam dolorum quas recusandae molestias eaque.</p>
-          <Button>Let's Talk</Button>
+          <Button>Let&apos;s Talk</Button>
         </div>
         <div className='flex-1 flex flex-col gap-[24px]'>
           {accordionData.map((faq, index) => (
