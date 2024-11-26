@@ -17,8 +17,8 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 
   return (
     <motion.div
-      className='bg-white p-[36px] lg:p-[50px] min-w-[300px] shadow-md rounded-[20px] flex flex-col gap-4'
-    >
+      whileTap={{ scale: 0.95 }}
+      className='bg-white p-[36px] lg:p-[50px] min-w-[300px] shadow-md rounded-[20px] flex flex-col gap-4'>
       <div className='flex gap-1'>
         {[...Array(starFilled)].map((_, index) => (
           <TbStarFilled key={index} className='text-rating-yellow' />
