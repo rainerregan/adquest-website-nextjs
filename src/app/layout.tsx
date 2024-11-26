@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/header/header";
 import Footer from "@/components/common/footer/footer";
+import { AOSInit } from "@/components/common/animation/on-scroll-animation";
 
 const montserrat = Montserrat({
   display: "swap",
@@ -31,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <AOSInit />
       <body
         className={`${montserrat.variable} ${inter.variable} antialiased`}
       >

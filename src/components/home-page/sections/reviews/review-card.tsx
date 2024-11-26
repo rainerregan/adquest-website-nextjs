@@ -1,6 +1,8 @@
+"use client"
 import React from 'react';
 import { Review } from './review-section';
 import { TbStar, TbStarFilled } from 'react-icons/tb';
+import { motion } from 'motion/react';
 
 interface ReviewCardProps {
   review: Review
@@ -14,7 +16,9 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   const starEmpty = 5 - starFilled;
 
   return (
-    <div className='bg-white p-[36px] lg:p-[50px] min-w-[300px] shadow-md rounded-[20px] flex flex-col gap-4'>
+    <motion.div
+      className='bg-white p-[36px] lg:p-[50px] min-w-[300px] shadow-md rounded-[20px] flex flex-col gap-4'
+    >
       <div className='flex gap-1'>
         {[...Array(starFilled)].map((_, index) => (
           <TbStarFilled key={index} className='text-rating-yellow' />
@@ -29,7 +33,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         <h3 className='font-bold'>{review.name}</h3>
         <p className='text-sm md:text-base'>{review.orgainzation}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -11,24 +11,29 @@ const HeroSection = () => {
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
         <div className='flex flex-col lg:flex-row items-center gap-[20px] pb-[80px] lg:pb-[120px]'>
           <div className='flex-1 w-full md:w-3/4 lg:w-full flex flex-col items-center lg:items-start'>
-            <h1 className={twMerge(
-              'font-bold flex flex-col items-center lg:items-start mb-[36px] lg:mb-[50px]', // Global
-              'text-center lg:text-left', // Text Alignment
-              'text-[32px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
-              'leading-[40px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
-            )}>
+            <h1
+              data-aos="fade-right"
+              className={twMerge(
+                'font-bold flex flex-col items-center lg:items-start mb-[36px] lg:mb-[50px]', // Global
+                'text-center lg:text-left', // Text Alignment
+                'text-[32px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
+                'leading-[40px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
+              )}
+            >
               <p>
                 Dapatkan hadiah <span className='text-main-green break-normal'>uang tunai</span> dari main mobile games <span className='lg:hidden'>untuk</span>
               </p>
               <TextAnimation />
             </h1>
 
-            <p className='text-base text-center lg:text-left lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
-            <DownloadRating />
+            <div data-aos="fade-right" data-aos-delay="500">
+              <p className='text-base text-center lg:text-left lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
+              <DownloadRating />
+            </div>
 
           </div>
 
-          <div className='w-full lg:w-1/3 xl:w-[40%] text-right flex items-center justify-end'>
+          <div className='w-full lg:w-1/3 xl:w-[40%] text-right flex items-center justify-end' data-aos="fade-left">
             <div className='w-full h-[400px] sm:h-[400px] lg:h-[650px] relative'>
               <Image
                 src={heroIllustration}

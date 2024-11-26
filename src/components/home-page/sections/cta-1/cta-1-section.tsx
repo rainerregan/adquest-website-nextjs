@@ -28,7 +28,7 @@ const Cta1Section = () => {
             <Image src='/images/illustration/cta_1_illust.png' alt='cta 1 illustration' fill objectFit='contain' className='w-full h-full' />
           </div>
         </div>
-        <div className='flex-1 flex flex-col items-center lg:items-start w-3/4 lg:w-full'>
+        <div className='flex-1 flex flex-col items-center lg:items-start w-3/4 lg:w-full' data-aos="fade-up">
           <h2 className='h2'>Bebaskan Dirimu dari Biaya Harian</h2>
           <DownloadRating
             ratingProps={{
