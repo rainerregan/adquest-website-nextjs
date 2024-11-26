@@ -8,14 +8,16 @@ interface CounterNumberItemProps {
 
 const CounterNumberItem: React.FC<CounterNumberItemProps> = ({ number }) => {
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.2 }} // Scale on hover
+      whileTap={{ scale: 0.9 }} // Scale on tap
       className="bg-white rounded-md sm:rounded-lg lg:rounded-xl text-main-black h-[30px] w-full sm:h-[36px] md:h-[50px] lg:h-[60px] xl:h-[70px] sm:aspect-square flex items-center justify-center text-lg md:text-3xl lg:text-4xl xl:text-5xl font-montserrat font-bold"
     >
       <motion.span
         key={number} // Key to trigger animation on change
-        initial={{ y: 50, opacity: 1 }} // Initial state
+        initial={{ y: -50, opacity: 1 }} // Initial state
         animate={{ y: 0, opacity: 1 }} // Animation state
-        exit={{ y: -50, opacity: 1 }} // Exit state
+        exit={{ y: 50, opacity: 1 }} // Exit state
         transition={{
           type: "spring",
           stiffness: 150,
@@ -24,7 +26,7 @@ const CounterNumberItem: React.FC<CounterNumberItemProps> = ({ number }) => {
       >
         {number}
       </motion.span>
-    </div>
+    </motion.div>
   );
 };
 
