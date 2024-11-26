@@ -33,17 +33,17 @@ const StepSection = () => {
   const steps: Step[] = [
     {
       title: "Temukan dan download games yang kamu suka",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
+      description: "AdQuest menyediakan banyak games yang bisa bantu kamu mendapatkan poin Eggs. Cari game yang seru buat kamu, lalu download langsung lewat aplikasi AdQuest.",
       illustration: step1Illust,
     },
     {
       title: "Selesaikan misi dan kumpulkan eggs sebagai hadiahmu",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
+      description: "Setelah download, mainkan gamenya langsung untuk mendapatkan “Eggs” (poin). Makin banyak dan tinggi misi yang kamu selesaikan, makin banyak Eggs yang terkumpul.",
       illustration: step2Illust,
     },
     {
       title: "Redeem Rewards",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
+      description: "Kalau Eggsmu sudah cukup, buka halaman Hadiah di AdQuest dan tukarkan dengan hadiah yang tersedia seperti saldo DANA dan OVO.",
       illustration: step3Illust,
     },
   ]

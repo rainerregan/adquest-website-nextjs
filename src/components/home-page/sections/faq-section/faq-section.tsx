@@ -9,20 +9,16 @@ export interface FAQ {
 const FaqSection = () => {
   const faqs: FAQ[] = [
     {
-      question: 'Question 3',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
+      question: 'Berapa lama Eggs akan diterima di akun AdQuest setelah menyelesaikan misi games?',
+      answer: 'Pada umumnya, Eggs akan segera kamu terima setelah kamu menyelesaikan misi. Namun penerimaan Eggs dapat tertunda sampai maksimum 30 hari dikarenakan verifikasi. Tentunya informasi penundaan Eggs sudah diberitahukan sebelumnya sebelum kamu menginstall games yang bersangkutan.'
     },
     {
-      question: 'Question 4',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
+      question: 'Apakah main games dari AdQuest harus download lagi di Google Play Store?',
+      answer: 'Betul, untuk mendapatkan Eggs dari bermain games, kamu harus mendownload games dari Google Play Store. Namun, sebelumnya kamu harus mulai dulu dari AdQuest, lalu cari games yang ingin kamu mainkan, dan kamu akan diarahkan otomatis langsung ke Google Play Store oleh sistem AdQuest. Jadi tidak boleh langsung download dari Google Play Store ya.'
     },
     {
-      question: 'Question 5',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
-    },
-    {
-      question: 'Question 6',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
+      question: 'Saya sudah selesaikan misi games sesuai syarat, namun status games terkait tidak mengalami perubahan, dimana warna status tidak berubah menjadi warna biru?',
+      answer: 'Terkadang ada penundaan dari sistem untuk mengubah warna status rewards dari abu-abu ke warna biru. Namun tidak perlu khawatir, hal ini akan berubah secara otomatis.'
     },
   ]
 

@@ -12,8 +12,8 @@ export const HeroSection = () => {
 
         <div className='flex flex-col md:flex-row gap-[48px]'>
           <div className='flex-1 flex flex-col gap-4 text-sm md:text-base' data-aos="fade-right">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio veniam ipsum earum, adipisci quas quibusdam repellendus delectus impedit totam. Natus odit aut dolor maxime eum sed veritatis earum ullam distinctio?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio veniam ipsum earum, adipisci quas quibusdam repellendus delectus impedit totam. Natus odit aut dolor maxime eum sed veritatis earum ullam distinctio?</p>
+            <p>Our expert team specializes in ad monetization, helping mobile games generate thousand dollar daily revenues. Join successful studios already capitalizing on the power of ads and start turning your games into a profitable venture today.</p>
+            <p>Focus on developing your games, and let AdQuest work its magic with your ad monetization strategy.</p>
             <Button>Let&apos;s Talk</Button>
           </div>
 
