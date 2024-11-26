@@ -72,11 +72,11 @@ const MonetizationSectionItem: React.FC<MonetizationSectionItemProps> = ({
   return (
     <div className={twMerge(
       'flex items-center justify-between',
-      item.direction === 'left' ? 'flex-row' : 'flex-row-reverse'
+      item.direction === 'left' ? 'flex-col-reverse md:flex-row' : 'flex-col-reverse md:flex-row-reverse'
     )}>
-      <div className='flex-1 flex flex-col gap-4'>
+      <div className='flex-1 flex flex-col gap-4 text-center md:text-left items-center md:items-baseline'>
         <h5 className='h5 text-main-green'>{item.title}</h5>
-        <p>{item.description}</p>
+        <p className='text-sm md:text-base'>{item.description}</p>
         <Button className='text-main-black'>Learn More</Button>
       </div>
 

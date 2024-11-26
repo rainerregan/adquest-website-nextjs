@@ -45,13 +45,16 @@ const CollaborateSection = () => {
 
   return (
     <div className='bg-main-black-2'>
-      <div className='bg-white section-rounded__top'>
+      <div className='bg-white section-rounded__top px-[24px] md:px-[48px]'>
         <div className='py-[100px] max-w-7xl mx-auto flex flex-col items-center'>
           <div className='mb-[48px]'>
             <h2 className='h2 text-center'>Let's <span>Collaborate</span></h2>
           </div>
 
-          <div className='grid grid-cols-2 gap-[40px] mb-[48px]'>
+          <div className={twMerge(
+            'md:grid md:grid-cols-2 gap-[40px] mb-[48px]',
+            'flex flex-col',
+          )}>
             {items.map((item, index) => (
               <CollaborateSectionItem key={index} item={item} />
             ))}
@@ -80,20 +83,20 @@ const CollaborateSectionItem: React.FC<CollaborateSectionItemProps> = ({
 }) => {
   return (
     <div className={twMerge(
-      'border-2 border-main-gray p-[56px] rounded-[30px] shadow-lg',
+      'border-2 border-main-gray p-[36px] md:p-[56px] rounded-[30px] shadow-lg',
       'flex gap-[36px] items-center',
-      type === 'full' ? 'col-span-2' : 'col-span-1',
-      type === 'half' ? 'flex-col' : 'flex-row'
+      type === 'full' ? 'md:col-span-2' : 'md:col-span-1',
+      type === 'half' ? 'flex-col md:flex-col' : 'flex-col md:flex-row md:items-center',
     )}>
       <div className={twMerge(type === 'full' ? 'flex-1' : '', 'font-semibold text-main-gray')}>
-        <h3 className={twMerge('h3 mb-8 text-main-green', type === 'full' ? 'text-left' : 'text-center')}>{item.title}</h3>
+        <h3 className={twMerge('h3 mb-6 text-main-green', type === 'full' ? 'text-center md:text-left' : 'text-center md:text-center')}>{item.title}</h3>
         <p>{item.description}</p>
       </div>
 
       <ul className='flex-1 w-full font-semibold text-main-gray'>
         {item.perks.map((perk, index) => (
-          <li key={index} className='flex items-start gap-4 mb-8'>
-            <div className='w-[16px] h-[16px] bg-main-green rounded-full'></div>
+          <li key={index} className='flex items-start gap-4 mb-8 last:mb-0'>
+            <div className='w-[16px] h-[16px] aspect-square bg-main-green rounded-full'></div>
             <p className='leading-none text-[16px]'>{perk}</p>
           </li>
         ))}
