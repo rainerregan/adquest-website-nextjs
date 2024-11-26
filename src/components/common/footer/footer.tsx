@@ -8,7 +8,6 @@ const Footer = () => {
   const footerLinks = [
     { title: "Help", href: '#' },
     { title: "FAQ", href: '#' },
-    { title: "About Us", href: '#' },
     { title: "T&C", href: '#' },
     { title: "Privacy Policy", href: '#' },
   ]
@@ -18,9 +17,9 @@ const Footer = () => {
       <div className='bg-main-black section-rounded__top pt-[100px] pb-[70px]'>
         <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px]'>
 
-          <div className=' flex gap-[50px] mb-[40px]'>
+          <div className=' flex flex-col md:flex-row gap-[50px] mb-[40px]'>
             {/* Left Side */}
-            <div className='w-1/3 flex flex-col gap-[30px]'>
+            <div className='w-full md:w-1/3 flex flex-col gap-[30px]'>
               <div className='flex flex-col gap-8'>
                 <Image src={appLogoWhite} alt='App Logo' width={150} height={50} />
                 <p>AdQuest is a mobile app where gamers earn points by playing featured games and redeem them for cash or gift cards.</p>
@@ -37,16 +36,13 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Right Side */}
-            <div className='flex-1'>
-            </div>
           </div>
 
           {/* Copyright */}
-          <div className='flex items-center justify-between'>
-            <p>Copyright &copy; AdQuest.id. 2024. All Rights Reserved.</p>
+          <div className='flex flex-col-reverse md:flex-row gap-8 items-center justify-between'>
+            <p className='text-sm md:text-base text-center md:text-left'>Copyright &copy; AdQuest.id. 2024. All Rights Reserved.</p>
 
-            <ul className='flex gap-8 font-bold'>
+            <ul className='flex gap-10 md:gap-8 font-bold text-sm md:text-base'>
               {footerLinks.map(x => (
                 <li><Link href={x.href}>{x.title}</Link></li>
               ))}
