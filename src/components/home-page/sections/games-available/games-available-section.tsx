@@ -1,4 +1,4 @@
-import { gameIcon1, gameIcon2, gameIcon3, gameIcon4, gameIcon5, gameIcon6 } from '@/assets/game-icons'
+import { gameIcon1, gameIcon10, gameIcon2, gameIcon3, gameIcon4, gameIcon5, gameIcon6, gameIcon7, gameIcon8, gameIcon9 } from '@/assets/game-icons'
 import Button from '@/components/common/button'
 import { illustKoin } from '@/components/common/illustration'
 import Image from 'next/image'
@@ -44,22 +44,22 @@ const GamesAvailableSection = () => {
     },
     {
       name: 'Game 7',
-      image: gameIcon1,
+      image: gameIcon7,
       url: 'https://game7.com'
     },
     {
       name: 'Game 8',
-      image: gameIcon2,
+      image: gameIcon8,
       url: 'https://game8.com'
     },
     {
       name: 'Game 9',
-      image: gameIcon3,
+      image: gameIcon9,
       url: 'https://game9.com'
     },
     {
       name: 'Game 10',
-      image: gameIcon4,
+      image: gameIcon10,
       url: 'https://game10.com'
     }
   ]
