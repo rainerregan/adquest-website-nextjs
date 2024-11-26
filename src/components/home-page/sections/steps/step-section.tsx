@@ -2,11 +2,20 @@
 import Button from '@/components/common/button';
 import DownloadRating from '@/components/common/download-rating';
 import { ctaImage, illustDino, illustKoin } from '@/components/common/illustration';
+import Steps from '@/components/common/step/steps';
+import { motion } from "framer-motion";
 import Image from 'next/image';
-import React from 'react';
-import { motion, stagger } from "framer-motion";
+import { useState } from 'react';
+
+export interface Step {
+  title: string;
+  description: string;
+  illustration: string;
+}
 
 const StepSection = () => {
+  const [currentStep, setCurrentStep] = useState(0)
+
   // Animation Variants
   const bobbingAnimation = {
     animate: {
@@ -20,6 +29,24 @@ const StepSection = () => {
     },
   };
 
+  const steps: Step[] = [
+    {
+      title: "Temukan dan download games yang kamu suka",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
+      illustration: illustKoin,
+    },
+    {
+      title: "Selesaikan misi dan kumpulkan eggs sebagai hadiahmu",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
+      illustration: illustKoin,
+    },
+    {
+      title: "Redeem Rewards",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
+      illustration: illustKoin,
+    },
+  ]
+
   return (
     <div className='bg-white z-[1] relative pb-[150px] pt-[100px] section-rounded__top section-rounded__bottom'>
       <div className='section flex flex-col items-center'>
@@ -27,8 +54,10 @@ const StepSection = () => {
           Jelajahi <span className='text-main-green'>dan Menangkan</span>
         </h2>
 
-        <div className='flex flex-col md:flex-row gap-4 items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
-          <div className='flex-1'>Steps</div>
+        <div className='flex flex-col md:flex-row gap-[20px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
+          <div className='flex-1'>
+            <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} />
+          </div>
 
           <div className='w-full md:w-1/3'>Illust</div>
 
