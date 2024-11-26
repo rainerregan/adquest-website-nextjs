@@ -48,7 +48,7 @@ const GamesAvailableSection = () => {
       <div className='pt-[100px] pb-[80px] mx-auto flex flex-col items-center gap-[60px] md:gap-[100px]'>
         <h2 className='h2 text-center'>Games <span>Available</span></h2>
 
-        <div className='games-row flex flex-row gap-[40px] w-fit bg-red-50 items-center justify-center'>
+        <div className='games-row flex flex-row gap-[40px] min-w-full w-fit bg-red-50 items-center justify-center'>
           {games.map((game, index) => (
             <div key={index} className='game-card bg-gray-200 rounded-lg shadow-md h-[120px] w-[120px] '>
               <Image src={game.image} alt={game.name} className='w-full h-full object-cover' />
