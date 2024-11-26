@@ -22,6 +22,10 @@ h6 {
   @apply font-montserrat;
 }
 
+.page {
+  @apply h-full w-full
+}
+
 .home {
   @apply bg-main-green-background h-full w-full
 }
