@@ -55,11 +55,11 @@ const StepSection = () => {
         </h2>
 
         <div className='flex flex-col md:flex-row gap-[20px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
-          <div className='flex-1'>
+          <div className='flex-1 h-fit'>
             <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} />
           </div>
 
-          <div className='w-full md:w-1/3'>Illust</div>
+          <div className='w-full md:w-1/3 flex justify-center'>Illust</div>
 
           <div className='flex-1'>
             <p className='mb-8'>

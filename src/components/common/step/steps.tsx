@@ -20,7 +20,7 @@ const Steps: React.FC<StepsProps> = ({
   steps,
 }) => {
   return (
-    <div>
+    <div style={{ marginBottom: `${(steps.length -1) * 50}px` }}>
       {steps.map((step, index) => (
         <StepItem
           key={index}
