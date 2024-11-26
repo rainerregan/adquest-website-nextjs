@@ -1,9 +1,9 @@
+import { AOSInit } from "@/components/common/animation/on-scroll-animation";
+import Footer from "@/components/common/footer/footer";
+import Header from "@/components/common/header/header";
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/common/header/header";
-import Footer from "@/components/common/footer/footer";
-import { AOSInit } from "@/components/common/animation/on-scroll-animation";
 
 const montserrat = Montserrat({
   display: "swap",
