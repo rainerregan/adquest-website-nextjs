@@ -10,13 +10,13 @@ const FAQCard: React.FC<FAQCardProps> = ({
   faq
 }) => {
   return (
-    <div className='w-full border-2 p-[32px] rounded-lg border-main-gray shadow-lg'>
+    <div className='w-full border-2 p-[20px] md:p-[32px] rounded-lg border-main-gray shadow-lg'>
       {/* Title */}
       <div className='flex justify-between items-start mb-4'>
-        <h3 className='font-bold text-2xl'>{faq.question}</h3>
+        <h3 className='font-bold text-xl md:text-2xl'>{faq.question}</h3>
 
         <button>
-          <TbChevronDown size={28} />
+          <TbChevronDown className='text-[22px] md:text-[28px]' />
         </button>
       </div>
       
