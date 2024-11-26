@@ -12,7 +12,9 @@ export default function Home() {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    setIsMounted(true)
+    setTimeout(() => {
+      setIsMounted(true)
+    }, 1000)
   }, [])
 
   if (!isMounted) return <Loading />

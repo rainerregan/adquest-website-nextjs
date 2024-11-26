@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
     <motion.div
       whileHover={{
         scale: 1.1, // Slightly enlarges the button
-        rotate: 5, // Bouncy shake effect
+        rotate: 2, // Bouncy shake effect
       }}
       initial={{
         rotate: 0
