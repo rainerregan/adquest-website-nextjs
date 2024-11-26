@@ -25,7 +25,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ faq }) => {
       transition={{ duration: 0.3 }}
     >
       {/* Title */}
-      <div className='flex justify-between items-start p-[20px] md:p-[24px]' onClick={toggleAccordion}>
+      <div className='flex justify-between items-start p-[20px] md:p-[24px] hover:cursor-pointer' onClick={toggleAccordion}>
         <h3 className='font-bold text-xl md:text-2xl'>{faq.question}</h3>
 
         <button>
@@ -43,9 +43,9 @@ const FAQCard: React.FC<FAQCardProps> = ({ faq }) => {
         animate={isOpen ? "open" : "closed"}
         variants={{
           open: { height: "auto", opacity: 1 },
-          closed: { height: 0,},
+          closed: { height: 0 },
         }}
-        transition={{ duration: 0.4 }}
+        transition={{ type: "spring", stiffness: 200, damping: 10, duration: 0.5 }}
         style={{ overflow: "hidden" }}
       >
         <div className=' px-[20px] pb-[20px] md:px-[24px] md:pb-[24px]'>

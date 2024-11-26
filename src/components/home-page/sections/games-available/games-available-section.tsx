@@ -61,7 +61,8 @@ const GamesAvailableSection = () => {
               <motion.div
                 key={index}
                 className='game-card rounded-[20px] shadow-xl h-[100px] md:h-[120px] w-[100px] md:w-[120px] overflow-hidden hover:cursor-pointer'
-                whileHover={{ scale: 1.2, x: -5, }} // Hover scale effect
+                whileHover={{ scale: 1.2, rotate: -5, }} // Hover scale effect
+                initial={{ rotate: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10, duration: 0.5 }} // Smooth hover transition
               >
                 <Image src={game.image} alt={game.name} className='w-full h-full object-cover' />
