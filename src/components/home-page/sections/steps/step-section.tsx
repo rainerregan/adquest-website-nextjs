@@ -1,9 +1,10 @@
 "use client"
+import { step1Illust, step2Illust, step3Illust } from '@/assets/steps-illust';
 import Button from '@/components/common/button';
 import DownloadRating from '@/components/common/download-rating';
 import { ctaImage, illustDino, illustKoin } from '@/components/common/illustration';
 import Steps from '@/components/common/step/steps';
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -33,17 +34,17 @@ const StepSection = () => {
     {
       title: "Temukan dan download games yang kamu suka",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
-      illustration: illustKoin,
+      illustration: step1Illust,
     },
     {
       title: "Selesaikan misi dan kumpulkan eggs sebagai hadiahmu",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
-      illustration: illustKoin,
+      illustration: step2Illust,
     },
     {
       title: "Redeem Rewards",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!",
-      illustration: illustKoin,
+      illustration: step3Illust,
     },
   ]
 
@@ -54,12 +55,32 @@ const StepSection = () => {
           Jelajahi <span className='text-main-green'>dan Menangkan</span>
         </h2>
 
-        <div className='flex flex-col md:flex-row gap-[20px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
+        <div className='flex flex-col md:flex-row gap-[50px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
           <div className='flex-1 h-fit'>
             <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} />
           </div>
 
-          <div className='w-full md:w-1/3 flex justify-center'>Illust</div>
+          <AnimatePresence>
+            <motion.div
+              key={currentStep}  // This ensures the animation triggers on state change
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 25,
+                duration: 2,
+              }}
+              whileHover={{ scale: 1.1, rotate: -2, transition: { type: 'spring', stiffness: 300, damping: 25 } }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="w-[280px] h-[600px]"
+            >
+              <Image
+                src={steps[currentStep].illustration}
+                alt="Illustration"
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
+          </AnimatePresence>
 
           <div className='flex-1'>
             <p className='mb-8'>
