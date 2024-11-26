@@ -9,28 +9,20 @@ export interface FAQ {
 const FaqSection = () => {
   const faqs: FAQ[] = [
     {
-      question: 'Question 1',
-      answer: 'Answer 1'
-    },
-    {
-      question: 'Question 2',
-      answer: 'Answer 2'
-    },
-    {
       question: 'Question 3',
-      answer: 'Answer 3'
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
     },
     {
       question: 'Question 4',
-      answer: 'Answer 4'
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
     },
     {
       question: 'Question 5',
-      answer: 'Answer 5'
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
     },
     {
       question: 'Question 6',
-      answer: 'Answer 6'
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse autem cum fugiat iure, atque ea, libero temporibus fugit est, assumenda veniam? Atque officia labore, natus pariatur maxime numquam animi sunt?'
     },
   ]
 

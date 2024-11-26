@@ -1,27 +1,58 @@
-import React from 'react';
-import { FAQ } from './faq-section';
-import { TbChevronDown } from 'react-icons/tb';
+"use client"
+import React, { useState } from 'react';
+import { TbChevronDown, TbChevronUp } from 'react-icons/tb';
+import { motion } from "framer-motion";
 
-interface FAQCardProps {
-  faq: FAQ
+interface FAQ {
+  question: string;
+  answer: string;
 }
 
-const FAQCard: React.FC<FAQCardProps> = ({
-  faq
-}) => {
+interface FAQCardProps {
+  faq: FAQ;
+}
+
+const FAQCard: React.FC<FAQCardProps> = ({ faq }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => setIsOpen(!isOpen);
+
   return (
-    <div className='w-full border-2 p-[20px] md:p-[32px] rounded-lg border-main-gray shadow-lg'>
+    <motion.div
+      className='w-full border-2 rounded-lg border-main-gray shadow-lg'
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       {/* Title */}
-      <div className='flex justify-between items-start mb-4'>
+      <div className='flex justify-between items-start p-[20px] md:p-[24px]' onClick={toggleAccordion}>
         <h3 className='font-bold text-xl md:text-2xl'>{faq.question}</h3>
 
         <button>
-          <TbChevronDown className='text-[22px] md:text-[28px]' />
+          {isOpen ? (
+            <TbChevronUp className='text-[22px] md:text-[28px]' />
+          ) : (
+            <TbChevronDown className='text-[22px] md:text-[28px]' />
+          )}
         </button>
       </div>
-      
-      <p>{faq.answer}</p>
-    </div>
+
+      {/* Animated Content */}
+      <motion.div
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        variants={{
+          open: { height: "auto", opacity: 1 },
+          closed: { height: 0,},
+        }}
+        transition={{ duration: 0.4 }}
+        style={{ overflow: "hidden" }}
+      >
+        <div className=' px-[20px] pb-[20px] md:px-[24px] md:pb-[24px]'>
+          <p>{faq.answer}</p>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
