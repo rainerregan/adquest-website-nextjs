@@ -2,7 +2,7 @@ import Button from '@/components/common/button'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
-const CollaborateSection = () => {
+export const CollaborateSection = () => {
   const items: CollaborateSectionItem[] = [
     {
       title: 'Level 1',
@@ -104,5 +104,3 @@ const CollaborateSectionItem: React.FC<CollaborateSectionItemProps> = ({
     </div >
   )
 }
-
-export default CollaborateSection

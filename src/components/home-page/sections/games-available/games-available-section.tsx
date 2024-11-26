@@ -26,14 +26,12 @@ const GamesAvailableSection = () => {
     { name: 'Game 10', image: gameIcon10, url: 'https://game10.com' },
   ];
 
-  let [ref, { width }] = useMeasure();
+  const [ref, { width }] = useMeasure();
   const xTranslation = useMotionValue(0);
 
   useEffect(() => {
-    let controls;
-    let finalPosition = -width / 2 - 8;
-
-    controls = animate(xTranslation, [0, finalPosition], {
+    const finalPosition = -width / 2 - 8;
+    const controls = animate(xTranslation, [0, finalPosition], {
       ease: 'linear',
       duration: 25,
       repeat: Infinity,

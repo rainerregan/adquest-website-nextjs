@@ -1,9 +1,8 @@
 import Button from '@/components/common/button'
 import { serviceHeroIllustration } from '@/components/common/illustration'
 import Image from 'next/image'
-import React from 'react'
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <div className='bg-white relative z-[1] section-rounded__bottom'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] pt-[100px] pb-[100px] flex flex-col'>
@@ -26,5 +25,3 @@ const HeroSection = () => {
     </div>
   )
 }
-
-export default HeroSection

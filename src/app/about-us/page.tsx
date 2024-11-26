@@ -1,4 +1,4 @@
-import HeroSection from '@/components/about-us-page/hero-section/hero-section'
+import { HeroSection } from '@/components/about-us-page/hero/hero-section'
 import React from 'react'
 
 const AboutUsPage = () => {

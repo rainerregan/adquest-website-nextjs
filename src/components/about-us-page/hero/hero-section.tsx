@@ -3,7 +3,7 @@ import FAQCard from '@/components/home-page/sections/faq-section/faq-card'
 import { FAQ } from '@/components/home-page/sections/faq-section/faq-section'
 import React from 'react'
 
-const HeroSection = () => {
+export const HeroSection = () => {
   const accordionData: FAQ[] = [
     {
       question: "Mission",
@@ -40,5 +40,3 @@ const HeroSection = () => {
     </div>
   )
 }
-
-export default HeroSection

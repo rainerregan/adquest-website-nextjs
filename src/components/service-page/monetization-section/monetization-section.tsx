@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
-const MonetizationSection = () => {
+export const MonetizationSection = () => {
 
   const items: MonetizationSectionItem[] = [
     {
@@ -86,5 +86,3 @@ const MonetizationSectionItem: React.FC<MonetizationSectionItemProps> = ({
     </div>
   )
 }
-
-export default MonetizationSection
