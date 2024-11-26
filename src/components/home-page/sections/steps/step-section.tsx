@@ -51,12 +51,12 @@ const StepSection = () => {
   return (
     <div className='bg-white z-[1] relative pb-[150px] pt-[100px] section-rounded__top section-rounded__bottom'>
       <div className='section flex flex-col items-center'>
-        <h2 className='h2 w-full md:w-1/2 text-balance !text-center'>
+        <h2 className='h2 w-full md:w-1/2 text-balance !text-center' data-aos="fade-down">
           Jelajahi <span className='text-main-green'>dan Menangkan</span>
         </h2>
 
         <div className='flex flex-col md:flex-row gap-[50px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
-          <div className='flex-1 h-fit'>
+          <div className='flex-1 h-fit' data-aos="fade-right">
             <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} />
           </div>
 
@@ -67,10 +67,10 @@ const StepSection = () => {
                 type: "spring",
                 stiffness: 300,
                 damping: 25,
-                duration: 2,
+                duration: 3,
               }}
-              whileHover={{ scale: 1.1, rotate: -2, transition: { type: 'spring', stiffness: 300, damping: 25 } }}
-              initial={{ opacity: 0, scale: 0.5 }}
+              // whileHover={{ scale: 1.1, rotate: -2, transition: { type: 'spring', stiffness: 300, damping: 25 } }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               className="w-[280px] h-[600px]"
             >
