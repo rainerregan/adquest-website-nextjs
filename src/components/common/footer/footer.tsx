@@ -43,8 +43,8 @@ const Footer = () => {
             <p className='text-sm md:text-base text-center md:text-left'>Copyright &copy; AdQuest.id. 2024. All Rights Reserved.</p>
 
             <ul className='flex gap-10 md:gap-8 font-bold text-sm md:text-base'>
-              {footerLinks.map(x => (
-                <li><Link href={x.href}>{x.title}</Link></li>
+              {footerLinks.map((x, index) => (
+                <li key={index}><Link href={x.href}>{x.title}</Link></li>
               ))}
             </ul>
           </div>

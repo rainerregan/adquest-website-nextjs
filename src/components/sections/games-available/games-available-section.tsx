@@ -5,7 +5,7 @@ import React from 'react'
 
 interface Game {
   name: string
-  image: any
+  image: string
   url: string
 }
 
