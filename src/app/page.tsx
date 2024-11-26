@@ -1,9 +1,9 @@
-import Cta1Section from "@/components/sections/cta-1/cta-1-section";
-import FaqSection from "@/components/sections/faq-section/faq-section";
-import GamesAvailableSection from "@/components/sections/games-available/games-available-section";
-import HeroSection from "@/components/sections/hero/hero-section";
-import ReviewSection from "@/components/sections/reviews/review-section";
-import StepSection from "@/components/sections/steps/step-section";
+import Cta1Section from "@/components/home-page/sections/cta-1/cta-1-section";
+import FaqSection from "@/components/home-page/sections/faq-section/faq-section";
+import GamesAvailableSection from "@/components/home-page/sections/games-available/games-available-section";
+import HeroSection from "@/components/home-page/sections/hero/hero-section";
+import ReviewSection from "@/components/home-page/sections/reviews/review-section";
+import StepSection from "@/components/home-page/sections/steps/step-section";
 
 export default function Home() {
   return (
