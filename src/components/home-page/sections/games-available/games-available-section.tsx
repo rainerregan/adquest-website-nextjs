@@ -39,11 +39,10 @@ const GamesAvailableSection = () => {
       repeat: Infinity,
       repeatType: 'loop',
       repeatDelay: 0,
-    })
+    });
 
     return controls.stop;
   }, [xTranslation, width]);
-
 
   return (
     <div className='bg-white relative z-[1] section-rounded__top overflow-hidden'>
@@ -59,9 +58,14 @@ const GamesAvailableSection = () => {
           >
             {/* Render games twice for seamless looping */}
             {[...games, ...games].map((game, index) => (
-              <div key={index} className='game-card rounded-[20px] shadow-xl h-[100px] md:h-[120px] w-[100px] md:w-[120px] overflow-hidden'>
+              <motion.div
+                key={index}
+                className='game-card rounded-[20px] shadow-xl h-[100px] md:h-[120px] w-[100px] md:w-[120px] overflow-hidden hover:cursor-pointer'
+                whileHover={{ scale: 1.2, x: -5, }} // Hover scale effect
+                transition={{ type: "spring", stiffness: 200, damping: 10, duration: 0.5 }} // Smooth hover transition
+              >
                 <Image src={game.image} alt={game.name} className='w-full h-full object-cover' />
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
