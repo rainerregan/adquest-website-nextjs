@@ -15,7 +15,7 @@ const HeroSection = () => {
           <div className='flex-1 flex flex-col gap-4 text-sm md:text-base'>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio veniam ipsum earum, adipisci quas quibusdam repellendus delectus impedit totam. Natus odit aut dolor maxime eum sed veritatis earum ullam distinctio?</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio veniam ipsum earum, adipisci quas quibusdam repellendus delectus impedit totam. Natus odit aut dolor maxime eum sed veritatis earum ullam distinctio?</p>
-            <Button>Let's Talk</Button>
+            <Button>Let&apos;s Talk</Button>
           </div>
 
           <div className='flex-1'>

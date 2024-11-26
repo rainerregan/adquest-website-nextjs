@@ -48,7 +48,7 @@ const CollaborateSection = () => {
       <div className='bg-white section-rounded__top px-[24px] md:px-[48px]'>
         <div className='py-[100px] max-w-7xl mx-auto flex flex-col items-center'>
           <div className='mb-[48px]'>
-            <h2 className='h2 text-center'>Let's <span>Collaborate</span></h2>
+            <h2 className='h2 text-center'>Let&apos;s <span>Collaborate</span></h2>
           </div>
 
           <div className={twMerge(
