@@ -42,6 +42,10 @@ h2 {
   @apply text-center lg:text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-8 text-balance
 }
 
+.h2 span {
+  @apply text-main-green
+}
+
 .section-rounded__top {
   @apply rounded-t-[20px] md:rounded-t-[40px]
 }

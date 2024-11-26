@@ -1,4 +1,5 @@
 import Cta1Section from "@/components/sections/cta-1/cta-1-section";
+import GamesAvailableSection from "@/components/sections/games-available/games-available-section";
 import HeroSection from "@/components/sections/hero/hero-section";
 import ReviewSection from "@/components/sections/reviews/review-section";
 import StepSection from "@/components/sections/steps/step-section";
@@ -10,6 +11,7 @@ export default function Home() {
       <Cta1Section />
       <StepSection />
       <ReviewSection />
+      <GamesAvailableSection />
     </div>
   )
 }
