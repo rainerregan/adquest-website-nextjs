@@ -3,6 +3,7 @@ import { heroIllustration } from '@/components/common/illustration'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import CounterSection from './counter/counter-section'
+import TextAnimation from './text-animation'
 
 const HeroSection = () => {
   return (
@@ -16,16 +17,10 @@ const HeroSection = () => {
               'text-[32px] sm:text-[40px] lg:text-[45px] xl:text-[64px]', // Font Size
               'leading-[40px] sm:leading-[54px] lg:leading-[60px] xl:leading-[76px]' // Leading
             )}>
-              <span>Dapatkan hadiah <span className='text-main-green break-normal'>uang tunai</span> dari main mobile games <span className='lg:hidden'>untuk</span></span>
-              <div className='flex flex-col lg:flex-row lg:gap-4 items-center h-fit'>
-                <span className='hidden lg:block'>untuk</span>
-                <div className={twMerge(
-                  'overflow-hidden leading-none text-white hero-dynamic-text bg-main-green w-fit px-3 h-fit rounded-lg mt-1',
-                  'text-[30px] sm:text-[34px] lg:text-[40px] xl:text-[54px]', // Font Size
-                )}>
-                  <span className='text-nowrap leading-none'>Belanja Online</span>
-                </div>
-              </div>
+              <p>
+                Dapatkan hadiah <span className='text-main-green break-normal'>uang tunai</span> dari main mobile games <span className='lg:hidden'>untuk</span>
+              </p>
+              <TextAnimation />
             </h1>
 
             <p className='text-base text-center lg:text-left lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
