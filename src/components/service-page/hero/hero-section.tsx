@@ -7,7 +7,7 @@ export const HeroSection = () => {
     <div className='bg-white relative z-[1] section-rounded__bottom'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] pt-[100px] pb-[100px] flex flex-col'>
         <div className='w-full md:max-w-[80%] mb-8' data-aos="fade-down">
-          <h1 className='h1 text-center md:text-left'>Ready To Unlock The Full Ads <span>Revenue Potential</span> of Your Mobile Games?</h1>
+          <h1 className='h1 !text-6xl text-center md:text-left'>Ready To Unlock The Full Ads <span>Revenue Potential</span> of Your Mobile Games?</h1>
         </div>
 
         <div className='flex flex-col md:flex-row gap-[48px]'>
