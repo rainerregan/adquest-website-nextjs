@@ -35,7 +35,7 @@ const Steps: React.FC<StepsProps> = ({ currentStep, setCurrentStep, steps }) => 
 const StepItem: React.FC<StepItemProps> = ({ step, active, isLast, onClick }) => {
   return (
     <div>
-      <div className="flex gap-[20px] items-center h-[100px]">
+      <div className="flex gap-[20px] items-center h-[150px]">
         <div className="min-w-[30px] flex justify-center relative">
           {/* Animated Circle */}
           <motion.div
@@ -54,12 +54,12 @@ const StepItem: React.FC<StepItemProps> = ({ step, active, isLast, onClick }) =>
           />
         </div>
         <div
-          className="h-[90%] flex items-center hover:cursor-pointer pl-8 pr-4"
+          className="h-[100%] flex items-center hover:cursor-pointer pl-8 pr-4"
           onClick={onClick}
         >
           <p
             className={twMerge(
-              "font-bold text-lg",
+              "font-bold text-xl md:text-2xl",
               active ? "text-main-black" : "text-main-gray opacity-50"
             )}
           >
@@ -67,9 +67,9 @@ const StepItem: React.FC<StepItemProps> = ({ step, active, isLast, onClick }) =>
           </p>
         </div>
       </div>
-      <div className="flex gap-[20px] my-[-50px]">
+      <div className="flex gap-[20px] my-[-70px]">
         {!isLast && (
-          <div className="w-[30px] h-[100px] flex justify-center">
+          <div className="w-[30px] h-[120px] md:h-[160px] flex justify-center">
             <div className="w-[2px] h-full bg-gray-200 z-0" />
           </div>
         )}

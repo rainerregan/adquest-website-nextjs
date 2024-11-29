@@ -84,10 +84,10 @@ const StepSection = () => {
           </AnimatePresence>
 
           <div className='flex-1' data-aos="fade-left">
-            <p className='mb-8'>
+            <p className='md:text-xl font-medium mb-8'>
               {steps[currentStep].description}
             </p>
-            <Button className='max-w-[200px] text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
+            <Button className='max-w-[200px] md:max-w-[250px] text-lg md:text-xl text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
           </div>
         </div>
 
