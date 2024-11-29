@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export interface HeaderMenuProps {
   items: HeaderMenuItem[];
@@ -8,15 +10,20 @@ export interface HeaderMenuProps {
 export interface HeaderMenuItem {
   title: string;
   link: string;
+  isActive?: boolean;
+  onClick?: () => void;
 }
 
 const HeaderMenu: React.FC<HeaderMenuProps> = ({
   items
 }) => {
+  // Get Current Route
+  const pathname = usePathname()
+
   return (
     <ul className='flex gap-12 items-center'>
       {items.map((item, index) => (
-        <li key={index}><Link href={item.link}>{item.title}</Link></li>
+        <li key={index} className={twMerge(pathname === item.link ? 'font-bold' : '')}><Link href={item.link}>{item.title}</Link></li>
       ))}
     </ul>
   );

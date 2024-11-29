@@ -1,9 +1,18 @@
+"use client"
+import { AnimatePresence, motion } from 'motion/react'
 import Link from 'next/link'
+import { useState } from 'react'
+import { TbMenu2 } from 'react-icons/tb'
+import { twMerge } from 'tailwind-merge'
+import DownloadRating from '../download-rating'
 import AppIcon from './app-icon'
-import LangSelector from './lang-selector'
 import HeaderMenu, { HeaderMenuItem } from './menu/header-menu'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const pathname = usePathname()
+
   const headerMenu: HeaderMenuItem[] = [
     { title: 'Products', link: '/' },
     { title: 'Services', link: '/service' },
@@ -22,8 +31,44 @@ const Header = () => {
           <HeaderMenu items={headerMenu} />
           {/* <LangSelector /> */}
         </div>
+
+        {/* Mobile */}
+        <button onClick={() => setShowMobileMenu(!showMobileMenu)} className='p-2 active:bg-gray-50 rounded-lg block md:hidden'>
+          <TbMenu2 className='text-3xl text-main-green' />
+        </button>
       </div>
+
+      <AnimatePresence>
+        {showMobileMenu && (
+          <motion.div
+            initial={{ height: 0 }}
+            animate={{ height: 'auto' }}
+            exit={{ height: 0 }}
+            className='absolute bg-white w-full shadow-xl overflow-hidden flex flex-col md:hidden'
+          >
+            {headerMenu.map((item, index) => (
+              <HeaderMobileMenuItem onClick={() => setShowMobileMenu(false)} key={index} {...item} isActive={pathname === item.link} />
+            ))}
+
+            <div className='px-[24px] flex justify-between items-center border-t py-2 gap-8 bg-gray-50'>
+              <span className='font-bold text-main-green'>Download Sekarang!</span>
+              <DownloadRating showRating={false} />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
+  )
+}
+
+const HeaderMobileMenuItem = ({ title, link, isActive, onClick }: HeaderMenuItem) => {
+  return (
+    <Link href={link} onClick={onClick} className={twMerge(
+      'px-[24px] py-3 font-semibold text-main-green active:bg-gray-100 hover:bg-gray-50',
+      isActive && 'bg-gray-50'
+    )}>
+      {title}
+    </Link>
   )
 }
 
