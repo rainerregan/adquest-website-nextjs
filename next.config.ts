@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         source: '/documents/:file',
         destination: '/documents/:file',
       },
+      {
+        source: '/app-ads.txt',
+        destination: '/app-ads.txt',
+      }
     ]
   },
 };
