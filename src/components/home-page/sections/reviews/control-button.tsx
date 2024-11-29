@@ -18,6 +18,7 @@ const ControlButton: React.FC<ControlButtonProps> = ({
       className={twMerge(
         'p-[1px] md:p-[2px] aspect-square flex items-center justify-center text-2xl md:text-3xl border-[3px] border-main-black rounded-full',
         disabled ? 'text-main-green  bg-main-black' : 'text-main-black',
+        'active:scale-75 transition-transform active:opacity-65'
       )}
       onClick={onClick}
     >

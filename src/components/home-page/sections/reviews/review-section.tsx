@@ -1,10 +1,9 @@
+import DownloadRating from '@/components/common/download-rating'
 import { circlePattern1, circlePattern2 } from '@/components/common/illustration'
 import Image from 'next/image'
+import { useRef } from 'react'
 import ControlButton from './control-button'
 import ReviewCard from './review-card'
-import { twMerge } from 'tailwind-merge'
-import DownloadRating from '@/components/common/download-rating'
-import { useRef } from 'react'
 import './review-section.css'
 
 export interface Review {
@@ -30,6 +29,42 @@ const ReviewSection = () => {
     },
     {
       name: 'John Doe',
+      orgainzation: 'Questies',
+      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      rating: 5
+    },
+    {
+      name: 'Jane Doe',
+      orgainzation: 'Questies',
+      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      rating: 5
+    },
+    {
+      name: 'Jane Doe',
+      orgainzation: 'Questies',
+      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      rating: 5
+    },
+    {
+      name: 'Jane Doe',
+      orgainzation: 'Questies',
+      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      rating: 5
+    },
+    {
+      name: 'Jane Doe',
+      orgainzation: 'Questies',
+      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      rating: 5
+    },
+    {
+      name: 'Jane Doe',
+      orgainzation: 'Questies',
+      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      rating: 5
+    },
+    {
+      name: 'Jane Doe',
       orgainzation: 'Questies',
       review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
       rating: 5
@@ -77,8 +112,8 @@ const ReviewSection = () => {
         <h2 className='h2 text-white' data-aos="fade-down">Cerita Questies</h2>
 
         {/* Reviews */}
-        <div ref={containerRef} className='w-full mt-4 lg:mt-8 mb-8 scroll-container'>
-          <div className='flex gap-6 w-fit px-[24px] md:px-[200px]'>
+        <div ref={containerRef} className='w-full mt-4 lg:mt-8 mb-8 scroll-container px-[200px]'>
+          <div className='flex gap-6'>
             {dummyReviews.map((review, index) => (
               <div className="scroll-item" key={index}>
                 <ReviewCard review={review} />
@@ -89,8 +124,12 @@ const ReviewSection = () => {
 
         {/* Controls */}
         <div className='flex gap-4 mb-8'>
-          <ControlButton onClick={() => scrollToCard('prev')} type='prev' disabled={true} />
-          <ControlButton onClick={() => scrollToCard('next')} type='next' disabled={false} />
+          <ControlButton
+            onClick={() => scrollToCard('prev')}
+            type='prev' disabled={true} />
+          <ControlButton
+            onClick={() => scrollToCard('next')}
+            type='next' disabled={false} />
         </div>
 
         {/* GPLAY */}
