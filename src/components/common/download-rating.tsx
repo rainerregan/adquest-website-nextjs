@@ -25,7 +25,7 @@ const DownloadRating: React.FC<DownloadRatingProps> = ({
         />
       </Link>
       {showRating && (
-        <Rating {...ratingProps} />
+        <Rating {...ratingProps} rating={4.3} />
       )}
     </div>
   )
