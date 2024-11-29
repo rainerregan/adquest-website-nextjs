@@ -1,10 +1,8 @@
 import DownloadRating from '@/components/common/download-rating'
-import { heroIllustration, homeMockup } from '@/components/common/illustration'
-import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import CounterSection from './counter/counter-section'
-import TextAnimation from './text-animation'
 import HeroIllustration from './hero-illustration'
+import TextAnimation from './text-animation'
 
 const HeroSection = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TbStar, TbStarFilled, TbStarHalf, TbStarHalfFilled } from 'react-icons/tb';
+import { TbStar, TbStarFilled, TbStarHalfFilled } from 'react-icons/tb';
 import { twMerge } from 'tailwind-merge';
 
 export interface RatingProps {
