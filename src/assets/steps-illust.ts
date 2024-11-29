@@ -1,9 +1,9 @@
-import step1Illust from '../../public/images/steps_illust/step1.svg';
-import step2Illust from '../../public/images/steps_illust/step2.svg';
-import step3Illust from '../../public/images/steps_illust/step3.svg';
+import { homeMockup as step1Illust } from "@/components/common/illustration"
+import step2Illust from "../../public/images/steps_illust/mockup_1.png"
+import step3Illust from "../../public/images/steps_illust/mockup_2.png"
 
 export {
   step1Illust,
   step2Illust,
-  step3Illust,
+  step3Illust
 }

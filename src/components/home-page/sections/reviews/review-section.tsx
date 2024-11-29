@@ -4,6 +4,8 @@ import ControlButton from './control-button'
 import ReviewCard from './review-card'
 import { twMerge } from 'tailwind-merge'
 import DownloadRating from '@/components/common/download-rating'
+import { useRef } from 'react'
+import './review-section.css'
 
 export interface Review {
   name: string
@@ -40,6 +42,19 @@ const ReviewSection = () => {
     },
   ]
 
+  const containerRef = useRef<HTMLDivElement | null>(null)
+
+  const scrollToCard = (direction: 'prev' | 'next') => {
+    if (containerRef.current) {
+      const container = containerRef.current
+      const scrollAmount = 500 // Width of one viewport
+      container.scrollBy({
+        left: direction === 'next' ? scrollAmount : -scrollAmount,
+        behavior: 'smooth',
+      })
+    }
+  }
+
   return (
     <div className='relative'>
       <div className="absolute w-full h-full overflow-hidden">
@@ -62,21 +77,20 @@ const ReviewSection = () => {
         <h2 className='h2 text-white' data-aos="fade-down">Cerita Questies</h2>
 
         {/* Reviews */}
-        <div className='w-full overflow-scroll mt-4 lg:mt-8 mb-8'>
-          <div className={twMerge(
-            'flex gap-4 w-fit px-[24px] md:px-[200px]',
-            'md:gap-6 lg:gap-8',
-          )}>
+        <div ref={containerRef} className='w-full mt-4 lg:mt-8 mb-8 scroll-container'>
+          <div className='flex gap-6 w-fit px-[24px] md:px-[200px]'>
             {dummyReviews.map((review, index) => (
-              <ReviewCard key={index} review={review} />
+              <div className="scroll-item" key={index}>
+                <ReviewCard review={review} />
+              </div>
             ))}
           </div>
         </div>
 
         {/* Controls */}
         <div className='flex gap-4 mb-8'>
-          <ControlButton type='prev' disabled={true} />
-          <ControlButton type='next' disabled={false} />
+          <ControlButton onClick={() => scrollToCard('prev')} type='prev' disabled={true} />
+          <ControlButton onClick={() => scrollToCard('next')} type='next' disabled={false} />
         </div>
 
         {/* GPLAY */}

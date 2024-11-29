@@ -4,14 +4,14 @@ import Button from '@/components/common/button';
 import DownloadRating from '@/components/common/download-rating';
 import { ctaImage, illustDino, illustKoin } from '@/components/common/illustration';
 import Steps from '@/components/common/step/steps';
-import Image from 'next/image';
-import { useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export interface Step {
   title: string;
   description: string;
-  illustration: string;
+  illustration: StaticImageData;
 }
 
 const StepSection = () => {
@@ -48,6 +48,14 @@ const StepSection = () => {
     },
   ]
 
+  // Change the current step, every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStep((prevStep) => (prevStep + 1) % steps.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [steps.length])
+
   return (
     <div className='bg-white z-[1] relative pb-[150px] pt-[100px] section-rounded__top section-rounded__bottom'>
       <div className='section flex flex-col items-center'>
@@ -60,18 +68,9 @@ const StepSection = () => {
             <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} />
           </div>
 
-          <AnimatePresence>
+          <AnimatePresence mode='wait'>
             <motion.div
               key={currentStep}  // This ensures the animation triggers on state change
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 25,
-                duration: 3,
-              }}
-              // whileHover={{ scale: 1.1, rotate: -2, transition: { type: 'spring', stiffness: 300, damping: 25 } }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
               className="w-[280px] h-[600px]"
             >
               <Image
