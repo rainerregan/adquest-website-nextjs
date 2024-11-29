@@ -46,7 +46,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <AOSInit />
       <body
         className={`${montserrat.variable} ${inter.variable} antialiased`}
