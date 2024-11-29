@@ -23,14 +23,14 @@ const Rating: React.FC<RatingProps> = ({
       return (
         <TbStarFilled
           key={index}
-          className={twMerge('text-rating-yellow', starClassName)}
+          className={twMerge('text-rating-yellow md:text-xl', starClassName)}
         />
       );
     } else if (halfStar) {
       return (
         <TbStarHalfFilled
           key={index}
-          className={twMerge('text-rating-yellow', starClassName)}
+          className={twMerge('text-rating-yellow md:text-xl', starClassName)}
         />
       );
     } else if (emptyStar) {
@@ -46,7 +46,7 @@ const Rating: React.FC<RatingProps> = ({
 
   return (
     <div className='flex items-center gap-2 md:gap-4 '>
-      <p className={twMerge('m-0 text-main-gray font-bold', textClassName)}>{rating.toPrecision(2)}</p>
+      <p className={twMerge('m-0 text-main-gray font-bold md:text-xl', textClassName)}>{rating.toPrecision(2)}</p>
       <div className='flex items-center gap-1 md:gap-1'>
         {stars}
       </div>

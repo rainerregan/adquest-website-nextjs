@@ -58,14 +58,14 @@ const ReviewSection = () => {
         className=' absolute right-0 top-0 translate-x-[50%] translate-y-[-30%] z-0'
       />
 
-      <div className='max-w-7xl mx-auto lg:px-[48px] py-[100px] flex flex-col items-center relative z-[2]'>
+      <div className='overflow-visible mx-auto py-[100px] flex flex-col items-center relative z-[2]'>
         <h2 className='h2 text-white' data-aos="fade-down">Cerita Questies</h2>
 
         {/* Reviews */}
         <div className='w-full overflow-scroll mt-4 lg:mt-8 mb-8'>
           <div className={twMerge(
-            'flex gap-4 w-fit px-[24px]',
-            'md:grid md:grid-cols-2 md:gap-6 lg:gap-8 md:px-0',
+            'flex gap-4 w-fit px-[24px] md:px-[200px]',
+            'md:gap-6 lg:gap-8',
           )}>
             {dummyReviews.map((review, index) => (
               <ReviewCard key={index} review={review} />

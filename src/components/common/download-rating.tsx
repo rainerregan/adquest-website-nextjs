@@ -15,7 +15,7 @@ const DownloadRating: React.FC<DownloadRatingProps> = ({
 }) => {
   return (
     <div className='flex items-center gap-4 md:gap-8'>
-      <Link href="https://play.google.com/store/apps/details?id=com.adquest.play&hl=id" className='h-[50px] w-[140px] relative'>
+      <Link href="https://play.google.com/store/apps/details?id=com.adquest.play&hl=id" className='h-[50px] w-[140px] md:w-[182px] md:h-[80px] relative'>
         <Image
           src={gPlayDownload}
           alt='Google Play Download'
