@@ -57,24 +57,6 @@ const ReviewSection = () => {
       review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
       rating: 5
     },
-    {
-      name: 'Jane Doe',
-      orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
-      rating: 5
-    },
-    {
-      name: 'Jane Doe',
-      orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
-      rating: 5
-    },
-    {
-      name: 'Jane Doe',
-      orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
-      rating: 5
-    },
   ]
 
   const containerRef = useRef<HTMLDivElement | null>(null)
