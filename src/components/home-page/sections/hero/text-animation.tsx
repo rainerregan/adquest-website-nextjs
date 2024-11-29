@@ -56,9 +56,9 @@ const TextAnimation = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentTextIndex} // Key changes trigger animation
-            initial={{ y: "120%" }} // Start below
+            initial={{ y: "100%" }} // Start below
             animate={{ y: "0%" }} // Slide into view
-            exit={{ y: "-120%" }} // Slide out above
+            exit={{ y: "-140%" }} // Slide out above
             transition={{
               duration: 0.7, // Smooth transition duration
               type: "spring",
