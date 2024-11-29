@@ -20,7 +20,7 @@ const Header = () => {
         {/* Desktop */}
         <div className='hidden lg:flex right-menu gap-12 items-center font-semibold text-main-green'>
           <HeaderMenu items={headerMenu} />
-          <LangSelector />
+          {/* <LangSelector /> */}
         </div>
       </div>
     </nav>
