@@ -1,6 +1,22 @@
 {
   "HomePage": {
-    "title": "Halo Dunia!",
-    "about": "Go to the about page"
+    "Hero": {
+      "Title": [
+        "Dapatkan hadiah",
+        "uang tunai",
+        "dari main mobile games",
+        "untuk"
+      ],
+      "Animation": [
+        "Belanja Online",
+        "Beli Pulsa",
+        "Top Up Game",
+        "Budget Healing"
+      ],
+      "Subtitle": "Gabung bersama 300,000+ players lainnya!",
+      "Counter": {
+        "Title": "Total Hadiah Uang Tunai Diberikan Hingga Saat Ini"
+      }
+    }
   }
 }

@@ -3,8 +3,10 @@ import { twMerge } from 'tailwind-merge'
 import CounterSection from './counter/counter-section'
 import HeroIllustration from './hero-illustration'
 import TextAnimation from './text-animation'
+import { useTranslations } from 'next-intl'
 
 const HeroSection = () => {
+  const t = useTranslations("HomePage")
   return (
     <div className='bg-white pt-[70px] md:pt-[150px] lg:pt-[30px] section-rounded__bottom z-[1] relative'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
@@ -20,20 +22,20 @@ const HeroSection = () => {
               )}
             >
               <p>
-                Dapatkan hadiah <span className='text-main-green break-normal'>uang tunai</span> dari main mobile games <span className='lg:hidden'>untuk</span>
+                {t('Hero.Title.0')} <span className='text-main-green break-normal'>{t('Hero.Title.1')}</span> {t('Hero.Title.2')} <span className='lg:hidden'>{t('Hero.Title.3')}</span>
               </p>
               <TextAnimation />
             </h1>
 
             <div data-aos="fade-right" data-aos-delay="500">
-              <p className='text-base text-center lg:text-left lg:text-xl font-extrabold text-main-gray mb-4'>Gabung bersama 300,000+ players lainnya!</p>
+              <p className='text-base text-center lg:text-left lg:text-xl font-extrabold text-main-gray mb-4'>{t('Hero.Subtitle')}</p>
               <DownloadRating />
             </div>
 
           </div>
 
           <div className='w-full lg:w-1/3 xl:w-[40%] py-[70px] text-right flex items-center justify-end' data-aos="fade-left">
-              <HeroIllustration />
+            <HeroIllustration />
           </div>
         </div>
 

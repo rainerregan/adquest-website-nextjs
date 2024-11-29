@@ -2,13 +2,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import { useTranslations } from "next-intl";
 
 const TextAnimation = () => {
+  const t = useTranslations("HomePage");
+
   const texts = [
-    "Belanja Online",
-    "Beli Pulsa",
-    "Top Up Game",
-    "Budget Healing"
+    "Hero.Animation.0",
+    "Hero.Animation.1",
+    "Hero.Animation.2",
+    "Hero.Animation.3",
   ];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [textWidth, setTextWidth] = useState(0);
@@ -31,7 +34,7 @@ const TextAnimation = () => {
 
   return (
     <div className="flex flex-col lg:flex-row lg:gap-4 items-center h-fit">
-      <span className="hidden lg:block">untuk</span>
+      <span className="hidden lg:block">{t('Hero.Title.3')}</span>
       <motion.div
         // Animate the width of the container dynamically
         animate={{ width: textWidth }}
@@ -51,7 +54,7 @@ const TextAnimation = () => {
           ref={textRef} // Reference to measure width
           className="opacity-0 w-fit text-nowrap"
         >
-          {texts[currentTextIndex]}
+          {t(texts[currentTextIndex])}
         </div>
         <AnimatePresence mode="wait">
           <motion.div
@@ -65,7 +68,7 @@ const TextAnimation = () => {
             }}
             className="text-nowrap leading-none absolute"
           >
-            {texts[currentTextIndex]}
+            {t(texts[currentTextIndex])}
           </motion.div>
         </AnimatePresence>
       </motion.div>

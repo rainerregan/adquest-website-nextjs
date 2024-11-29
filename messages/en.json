@@ -1,6 +1,22 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "Hero": {
+      "Title": [
+        "Win",
+        "cash prizez",
+        "by playing mobile games",
+        "for"
+      ],
+      "Animation": [
+        "Onlline Shopping",
+        "Phone Internet Top-ups",
+        "Game Top-ups",
+        "Budget Healing"
+      ],
+      "Subtitle": "Join over 300,000+ other players!",
+      "Counter": {
+        "Title": "Total cash prizes paid out so far"
+      }
+    }
   }
 }
