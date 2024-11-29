@@ -20,6 +20,22 @@
     },
     "CTA1": {
       "Title": "Free Yourself from Daily Expenses"
+    },
+    "Steps": {
+      "Title": [
+        "Explore",
+        "and Win"
+      ],
+      "Subtitles": [
+        "Discover and Download Games You Love",
+        "Complete Missions and Collect Eggs",
+        "Exchange Eggs for Cash"
+      ],
+      "Captions": [
+        "AdQuest has tons of games to help you earn Eggs points! Find games that excite you and download them directly from the AdQuest app.",
+        "After downloading, start playing to earn Eggs (points). The more missions you complete, the more Eggs you’ll rack up!",
+        "Once you’ve saved up enough Eggs, go to the Rewards page in AdQuest and exchange them for prizes like DANA or OVO balance."
+      ]
     }
   }
 }

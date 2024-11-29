@@ -7,6 +7,7 @@ import Steps from '@/components/common/step/steps';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 export interface Step {
   title: string;
@@ -15,6 +16,7 @@ export interface Step {
 }
 
 const StepSection = () => {
+  const t = useTranslations("HomePage.Steps")
   const [currentStep, setCurrentStep] = useState(0)
 
   // Animation Variants
@@ -60,7 +62,7 @@ const StepSection = () => {
     <div className='bg-white z-[1] relative pb-[150px] pt-[100px] section-rounded__top section-rounded__bottom'>
       <div className='section flex flex-col items-center'>
         <h2 className='h2 w-full md:w-1/2 text-balance !text-center' data-aos="fade-down">
-          Jelajahi <span className='text-main-green'>dan Menangkan</span>
+          {t('Title.0')} <span className='text-main-green'>{t('Title.1')}</span>
         </h2>
 
         <div className='flex flex-col md:flex-row gap-[50px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
