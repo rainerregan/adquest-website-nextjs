@@ -6,9 +6,11 @@ import HeroSection from "@/components/home-page/sections/hero/hero-section";
 import ReviewSection from "@/components/home-page/sections/reviews/review-section";
 import StepSection from "@/components/home-page/sections/steps/step-section";
 import Loading from "@/components/loading";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const t = useTranslations('HomePage');
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
