@@ -14,6 +14,9 @@ import serviceHeroIllustration from '../../../public/images/service/service-hero
 import monetization1Illustration from '../../../public/images/service/monetization/mone_1.svg'
 import monetization2Illustration from '../../../public/images/service/monetization/mone_2.svg'
 
+import homeMockup from '../../../public/images/illustration/hero/mockup_home.png'
+import illustDinoEgg from '../../../public/images/illustration/hero/illust_dino_egg.svg'
+
 export {
   heroIllustration,
   gPlayDownload,
@@ -28,5 +31,7 @@ export {
   circlePattern1Black,
   circlePattern2Black,
   monetization1Illustration,
-  monetization2Illustration
+  monetization2Illustration,
+  homeMockup,
+  illustDinoEgg
 }

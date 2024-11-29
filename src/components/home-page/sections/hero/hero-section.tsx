@@ -1,13 +1,14 @@
 import DownloadRating from '@/components/common/download-rating'
-import { heroIllustration } from '@/components/common/illustration'
+import { heroIllustration, homeMockup } from '@/components/common/illustration'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import CounterSection from './counter/counter-section'
 import TextAnimation from './text-animation'
+import HeroIllustration from './hero-illustration'
 
 const HeroSection = () => {
   return (
-    <div className='bg-white pt-[50px] md:pt-[70px] lg:pt-[30px] section-rounded__bottom z-[1] relative'>
+    <div className='bg-white pt-[70px] md:pt-[150px] lg:pt-[30px] section-rounded__bottom z-[1] relative'>
       <div className='max-w-7xl mx-auto px-[24px] lg:px-[48px] relative'>
         <div className='flex flex-col lg:flex-row items-center gap-[20px] pb-[80px] lg:pb-[120px]'>
           <div className='flex-1 w-full md:w-3/4 lg:w-full flex flex-col items-center lg:items-start'>
@@ -33,16 +34,8 @@ const HeroSection = () => {
 
           </div>
 
-          <div className='w-full lg:w-1/3 xl:w-[40%] text-right flex items-center justify-end' data-aos="fade-left">
-            <div className='w-full h-[400px] sm:h-[400px] lg:h-[650px] relative'>
-              <Image
-                src={heroIllustration}
-                objectFit="contain"
-                fill
-                alt='hero illustration'
-                className='w-full h-full absolute'
-              />
-            </div>
+          <div className='w-full lg:w-1/3 xl:w-[40%] py-[70px] text-right flex items-center justify-end' data-aos="fade-left">
+              <HeroIllustration />
           </div>
         </div>
 
