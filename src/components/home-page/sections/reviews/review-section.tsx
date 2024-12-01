@@ -16,45 +16,33 @@ export interface Review {
 const ReviewSection = () => {
   const dummyReviews: Review[] = [
     {
-      name: 'John Doe',
+      name: 'Darmasyi',
       orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      review: 'Apk nya mantap kali... bisa hasilkan cuan dg main game, isi survey juga dan selesaikan misi yg di syarat gamenya...alhamdulillah udah narik 20k Semoga sukses trs buat mimin apk AdQuest🥰🥰🥰',
       rating: 5
     },
     {
-      name: 'Jane Doe',
+      name: '​​Anggrini Manullang',
       orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      review: 'Aplikasinyaa kerennn, lumayannn nambah nambah cuan untuk jajan, beli skincare, dll. Seminggu bisa dapat sampai 300rb an lo😍😍😍',
       rating: 5
     },
     {
-      name: 'John Doe',
+      name: 'Nayra Zaharah',
       orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      review: 'Aplikasi yang ngebantu lumayan cuannn!! main ini udah lama bgt tp menurut aku apk yg paling cpt dpt cuan & terbuktii ga pake lama',
       rating: 5
     },
     {
-      name: 'Jane Doe',
+      name: 'Annisa Sofiyanti',
       orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      review: 'Kapan lagi main game dapet cuan wkwk',
       rating: 5
     },
     {
-      name: 'Jane Doe',
+      name: 'Ardina Maulidia _11',
       orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
-      rating: 5
-    },
-    {
-      name: 'Jane Doe',
-      orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
-      rating: 5
-    },
-    {
-      name: 'Jane Doe',
-      orgainzation: 'Questies',
-      review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim, voluptate omnis quia tempora eum tenetur ut, molestiae amet quibusdam assumenda ipsam fugiat officiis maiores quisquam dolor totam! Labore, voluptatem!',
+      review: 'yeay 🥰🥳 saya berhasil tarik tunai dana 5.000 , kalian harus coba aplikasi ini gusy terus jg harus rutin liat iklan ( kalo ada) pasti bakal kekumpul telur egg nya dan kalian bakal bs tukerin deh. TERIMAKASIH AdQuest',
       rating: 5
     },
   ]

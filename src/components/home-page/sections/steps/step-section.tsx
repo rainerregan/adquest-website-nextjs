@@ -42,7 +42,7 @@ const StepSection = () => {
       illustration: mockupTasks,
     },
     {
-      title: "Redeem Rewards",
+      title: "Tukarkan Eggs dengan uang tunai",
       description: "Kalau Eggsmu sudah cukup, buka halaman Hadiah di AdQuest dan tukarkan dengan hadiah yang tersedia seperti saldo DANA dan OVO.",
       illustration: mockupRewards,
     },
