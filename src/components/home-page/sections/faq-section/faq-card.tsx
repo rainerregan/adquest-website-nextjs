@@ -22,7 +22,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ faq }) => {
       className='w-full border-2 rounded-lg border-main-gray shadow-lg'
     >
       {/* Title */}
-      <div className='flex justify-between items-start p-[20px] md:p-[24px] hover:cursor-pointer' onClick={toggleAccordion}>
+      <div className='flex justify-between items-start gap-4 p-[20px] md:p-[24px] hover:cursor-pointer' onClick={toggleAccordion}>
         <h3 className='font-bold text-lg md:text-2xl'>{faq.question}</h3>
 
         <button>
