@@ -2,13 +2,13 @@
 import { motion, animate, useMotionValue } from 'motion/react';
 import { gameIcon1, gameIcon2, gameIcon3, gameIcon4, gameIcon5, gameIcon6, gameIcon7, gameIcon8, gameIcon9, gameIcon10 } from '@/assets/game-icons';
 import Button from '@/components/common/button';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React, { useEffect } from 'react';
 import useMeasure from "react-use-measure";
 
 interface Game {
   name: string;
-  image: string;
+  image: StaticImageData;
   url: string;
 }
 
@@ -63,7 +63,7 @@ const GamesAvailableSection = () => {
                 initial={{ rotate: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10, duration: 0.5 }} // Smooth hover transition
               >
-                <Image src={game.image} alt={game.name} className='w-full h-full object-cover' />
+                <Image src={game.image} alt={game.name} className='w-full h-full object-cover' loading='eager' />
               </motion.div>
             ))}
           </motion.div>

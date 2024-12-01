@@ -14,6 +14,9 @@ const nextConfig = {
       }
     ]
   },
+  images: {
+    domains: ['adquest.id'], // List of allowed domains
+  },
 };
 
 export default nextConfig;
