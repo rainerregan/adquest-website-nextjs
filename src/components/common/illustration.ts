@@ -1,5 +1,4 @@
-import heroIllustration from '../../../public/images/illustration/hero_illust.png'
-import cta1Illustration from '../../../public/images/illustration/cta_1_illust.png'
+import cta1Illustration from '../../../public/images/illustration/cta/cta_illust.webp'
 import circlePattern1 from '../../../public/images/illustration/pattern/circle_pattern1.svg'
 import circlePattern2 from '../../../public/images/illustration/pattern/circle_pattern2.svg'
 import circlePattern1Black from '../../../public/images/illustration/pattern/circle_pattern1_black.svg'
@@ -14,11 +13,9 @@ import serviceHeroIllustration from '../../../public/images/service/service-hero
 import monetization1Illustration from '../../../public/images/service/monetization/mone_1.svg'
 import monetization2Illustration from '../../../public/images/service/monetization/mone_2.svg'
 
-import homeMockup from '../../../public/images/illustration/hero/mockup_home.png'
 import illustDinoEgg from '../../../public/images/illustration/hero/illust_dino_egg.svg'
 
 export {
-  heroIllustration,
   gPlayDownload,
   cta1Illustration,
   circlePattern1,
@@ -32,6 +29,5 @@ export {
   circlePattern2Black,
   monetization1Illustration,
   monetization2Illustration,
-  homeMockup,
   illustDinoEgg
 }

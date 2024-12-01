@@ -1,12 +1,12 @@
 "use client"
-import { step1Illust, step2Illust, step3Illust } from '@/assets/steps-illust';
 import Button from '@/components/common/button';
 import DownloadRating from '@/components/common/download-rating';
 import { ctaImage, illustDino, illustKoin } from '@/components/common/illustration';
+import { mockupHome, mockupRewards, mockupTasks } from '@/components/common/mockup';
 import Steps from '@/components/common/step/steps';
+import { AnimatePresence, motion } from 'motion/react';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 
 export interface Step {
   title: string;
@@ -34,17 +34,17 @@ const StepSection = () => {
     {
       title: "Temukan dan download games yang kamu suka",
       description: "AdQuest menyediakan banyak games yang bisa bantu kamu mendapatkan poin Eggs. Cari game yang seru buat kamu, lalu download langsung lewat aplikasi AdQuest.",
-      illustration: step1Illust,
+      illustration: mockupHome,
     },
     {
       title: "Selesaikan misi dan kumpulkan eggs sebagai hadiahmu",
       description: "Setelah download, mainkan gamenya langsung untuk mendapatkan “Eggs” (poin). Makin banyak dan tinggi misi yang kamu selesaikan, makin banyak Eggs yang terkumpul.",
-      illustration: step2Illust,
+      illustration: mockupTasks,
     },
     {
       title: "Redeem Rewards",
       description: "Kalau Eggsmu sudah cukup, buka halaman Hadiah di AdQuest dan tukarkan dengan hadiah yang tersedia seperti saldo DANA dan OVO.",
-      illustration: step3Illust,
+      illustration: mockupRewards,
     },
   ]
 
