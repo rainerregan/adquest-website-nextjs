@@ -6,37 +6,36 @@ export const CollaborateSection = () => {
   const items: CollaborateSectionItem[] = [
     {
       title: 'Level 1',
-      description: 'Our team of experts will conduct a comprehensive analysis of your game and provide a detailed report outlining growth opportunities and actionable recommendations. This will be based on:',
+      description: 'Tim kami akan melakukan analisis mendalam terhadap game Anda dan memberikan laporan terperinci yang dapat mengidentifikasi peluang pertumbuhan serta rekomendasi yang dapat diimplementasikan pada games Anda. Ini semua akan didasarkan pada:',
       perks: [
-        'IAP and ad revenue performance metrics',
-        'Ad placement strategies',
-        'Ad format optimization',
-        'Waterfall setup analysis',
-        'User segmentation insights',
-        'Evaluation of ad networks'
+        'Metrik kinerja pendapatan IAP dan iklan',
+        'Strategi penempatan iklan',
+        'Optimasi format iklan',
+        'Analisis pengaturan waterfall setup',
+        'Evaluasi ad networks',
       ]
     },
     {
       title: 'Level 2',
-      description: 'After the audit and a thorough presentation of our recommendations and proposed actions, we will create a detailed implementation plan that includes:',
+      description: 'Setelah audit dan presentasi dari tim AdQuest mengenai rekomendasi beserta langkah-langkah yang kami usulkan, kami akan menyusun rencana implementasi terperinci yang mencakup:',
       perks: [
-        'Prioritization of recommended changes',
-        'Setup of ad networks and mediation platforms',
-        'Integration of new ad formats',
-        'Optimization of ad networks and mediation strategies',
-        'Introduction of additional ad placements'
+        'Prioritas perubahan yang direkomendasikan',
+        'Pengaturan jaringan iklan dan platform mediasi',
+        'Integrasi format iklan baru',
+        'Optimasi strategi jaringan iklan dan mediasi',
+        'Penambahan penempatan iklan baru'
       ]
     },
     {
       title: 'Level 3',
-      description: 'Without continuous management and optimization, revenue can begin to decline quickly. We ensure your game stays optimized and grows consistently by:',
+      description: 'Tanpa manajemen dan optimasi yang berkelanjutan, pendapatan bisa mulai menurun dengan cepat. Kami memastikan game Anda tetap teroptimasi dan tumbuh secara konsisten dengan cara:',
       perks: [
-        'Conducting A/B testing',
-        'Designing ad placements for new features',
-        'Managing waterfall and mediation configurations',
-        'Overseeing partner relationships with ad networks',
-        'Addressing issues related to new content',
-        'Identifying and securing new, profitable business opportunities'
+        'Melakukan A/B testing',
+        'Merancang penempatan iklan untuk fitur baru',
+        'Mengelola konfigurasi waterfall dan mediasi',
+        'Mengawasi hubungan mitra dengan jaringan iklan',
+        'Menangani masalah terkait konten iklan baru',
+        'Mengidentifikasi dan mengamankan peluang bisnis baru yang menguntungkan'
       ],
       type: 'full'
     },
@@ -48,7 +47,7 @@ export const CollaborateSection = () => {
       <div className='bg-white section-rounded__top px-[24px] md:px-[48px]'>
         <div className='py-[100px] max-w-7xl mx-auto flex flex-col items-center'>
           <div className='mb-[48px]' data-aos="fade-down">
-            <h2 className='h2 text-center'>Let&apos;s <span>Collaborate</span></h2>
+            <h2 className='h2 text-center'><span>Kolaborasi</span> Sekarang</h2>
           </div>
 
           <div className={twMerge(
@@ -62,7 +61,7 @@ export const CollaborateSection = () => {
             ))}
           </div>
 
-          <Button>Discover</Button>
+          {/* <Button>Discover</Button> */}
         </div>
       </div>
     </div>

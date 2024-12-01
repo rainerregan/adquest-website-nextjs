@@ -8,14 +8,14 @@ export const MonetizationSection = () => {
 
   const items: MonetizationSectionItem[] = [
     {
-      title: 'Massive Global User Base',
-      description: 'There are over 3.5 billion smartphone users worldwide, and a large percentage of them play mobile games. This vast audience creates enormous potential for ad monetization across different game genres.',
+      title: 'Populasi Pemain Global',
+      description: 'Terdapat lebih dari 3,5 miliar pengguna smartphone di seluruh dunia, dan sebagian besar dari mereka bermain mobile games. Audiens yang luas ini menciptakan potensi besar untuk monetisasi iklan di berbagai genre game.',
       illust: monetization1Illustration,
       direction: 'left'
     },
     {
-      title: 'Highly Engaged Audience',
-      description: 'Mobile games are designed to be engaging and entertaining, which means that players are more likely to spend time in-game. This high level of engagement creates more opportunities for ad monetization and better ad performance.',
+      title: 'Audiens yang Aktif',
+      description: 'Game mobile dirancang untuk dimainkan dengan menarik dan menghibur, yang berarti pemain akan cenderung menghabiskan lebih banyak waktu di dalam game. Tingkat keterlibatan yang tinggi ini menciptakan lebih banyak peluang untuk monetisasi iklan dan meningkatkan kinerja iklan.',
       illust: monetization2Illustration,
       direction: 'right'
     },
@@ -41,8 +41,9 @@ export const MonetizationSection = () => {
       />
 
       <div className='max-w-7xl mx-auto py-[120px] px-[24px] lg:px-[48px] z-[2] relative'>
-        <div className='mb-[70px] flex justify-center' data-aos="fade-down">
-          <h1 className='h2 !text-center text-balance'>Ready To Unlock The Full Ads <span>Revenue Potential</span> of Your Mobile Games?</h1>
+        <div className='mb-[70px] flex justify-center flex-col text-center' data-aos="fade-down">
+          <h1 className='h2 !text-center text-balance'><span>Monetisasi</span> sekarang</h1>
+          <p>Monetisasi iklan adalah strategi yang efektif untuk meningkatkan pendapatan game mobile Anda.</p>
         </div>
 
         <div className='flex flex-col gap-[10px]'>
@@ -79,7 +80,7 @@ const MonetizationSectionItem: React.FC<MonetizationSectionItemProps> = ({
       <div className='flex-1 flex flex-col gap-10 text-center md:text-left items-center md:items-baseline'>
         <h5 className='h5 text-3xl md:!text-4xl text-main-green'>{item.title}</h5>
         <p className='text-sm md:text-base'>{item.description}</p>
-        <Button className='text-main-black'>Learn More</Button>
+        <Button className='text-main-black'>Pelajari lebih lanjut</Button>
       </div>
 
       <div className='flex-1'>
