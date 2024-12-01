@@ -60,7 +60,7 @@ const StepSection = () => {
     <div className='bg-white z-[1] relative pb-[150px] pt-[100px] section-rounded__top section-rounded__bottom'>
       <div className='section flex flex-col items-center'>
         <h2 className='h2 w-full md:w-1/2 text-balance !text-center' data-aos="fade-down">
-          Jelajahi <span className='text-main-green'>dan Menangkan</span>
+          Main <span className='text-main-green'>dan Menangkan</span>
         </h2>
 
         <div className='flex flex-col md:flex-row gap-[50px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
