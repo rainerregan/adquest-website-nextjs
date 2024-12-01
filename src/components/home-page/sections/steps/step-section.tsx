@@ -78,6 +78,7 @@ const StepSection = () => {
                 alt="Illustration"
                 className="w-full h-full object-contain"
                 data-aos="fade-up"
+                loading='eager'
               />
             </motion.div>
           </AnimatePresence>
