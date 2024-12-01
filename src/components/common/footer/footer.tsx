@@ -22,18 +22,18 @@ const Footer = () => {
             <div className='w-full md:w-1/3 flex flex-col gap-[30px]'>
               <div className='flex flex-col gap-8'>
                 <Image src={appLogoWhite} alt='App Logo' width={150} height={50} />
-                <p>AdQuest is a mobile app where gamers earn points by playing featured games and redeem them for cash or gift cards.</p>
+                <p>AdQuest adalah aplikasi mobile yang memungkinkan para gamers memperoleh poin dengan memainkan game-game unggulan dan menukarkannya dengan uang tunai.</p>
               </div>
 
               {/* Google Play */}
               <DownloadRating showRating={false} />
 
               {/* Social Media */}
-              <div className='flex gap-[20px]'>
+              {/* <div className='flex gap-[20px]'>
                 <Link href={"#"}>
                   <TbBrandInstagram className='text-white text-[40px]' />
                 </Link>
-              </div>
+              </div> */}
             </div>
 
           </div>
@@ -42,11 +42,11 @@ const Footer = () => {
           <div className='flex flex-col-reverse md:flex-row gap-8 items-center justify-between'>
             <p className='text-sm md:text-base text-center md:text-left'>Copyright &copy; AdQuest.id. 2024. All Rights Reserved.</p>
 
-            <ul className='flex gap-10 md:gap-8 font-bold text-sm md:text-base'>
+            {/* <ul className='flex gap-10 md:gap-8 font-bold text-sm md:text-base'>
               {footerLinks.map((x, index) => (
                 <li key={index}><Link href={x.href}>{x.title}</Link></li>
               ))}
-            </ul>
+            </ul> */}
           </div>
 
         </div>
