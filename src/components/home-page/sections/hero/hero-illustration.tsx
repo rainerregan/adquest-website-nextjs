@@ -1,6 +1,7 @@
-import { homeMockup, illustDinoEgg, illustKoin } from "@/components/common/illustration"
-import Image from "next/image"
-import { motion } from "motion/react"
+import { illustDinoEgg, illustKoin } from "@/components/common/illustration";
+import { mockupHome } from "@/components/common/mockup";
+import { motion } from "motion/react";
+import Image from "next/image";
 
 const HeroIllustration = () => {
 
@@ -29,7 +30,7 @@ const HeroIllustration = () => {
         <Image src={illustKoin} alt="illustration" className="w-fit h-[100px]" />
       </motion.div>
       <div className='w-full h-[500px] relative'>
-        <Image src={homeMockup} alt='Hero Image' fill objectFit='contain' />
+        <Image src={mockupHome} alt='Hero Image' fill objectFit='contain' />
       </div>
     </div>
   )
