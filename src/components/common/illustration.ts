@@ -4,7 +4,7 @@ import circlePattern2 from '../../../public/images/illustration/pattern/circle_p
 import circlePattern1Black from '../../../public/images/illustration/pattern/circle_pattern1_black.svg'
 import circlePattern2Black from '../../../public/images/illustration/pattern/circle_pattern2_black.svg'
 import gPlayDownload from '../../../public/images/misc/download_gplay.png'
-import ctaImage from '../../../public/images/stock-photo/cta_image.png'
+import ctaImage from '../../../public/images/stock-photo/cta_bg.webp'
 import illustKoin from '../../../public/images/illustration/illust_koin.svg'
 import illustDino from '../../../public/images/illustration/illust_dino.svg'
 import appLogoWhite from '../../../public/images/logo/adquest_logo_white.svg'

@@ -121,6 +121,7 @@ const StepSection = () => {
                 fill
                 objectFit='cover'
                 className='w-full h-full'
+                loading='eager'
               />
             </div>
 
