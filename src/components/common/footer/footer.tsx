@@ -1,15 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { TbBrandInstagram } from 'react-icons/tb'
 import DownloadRating from '../download-rating'
 import { appLogoWhite } from '../illustration'
 
 const Footer = () => {
   const footerLinks = [
-    { title: "Help", href: '#' },
-    { title: "FAQ", href: '#' },
-    { title: "T&C", href: '#' },
-    { title: "Privacy Policy", href: '#' },
+    { title: "T&C", href: '/documents/syarat-ketentuan.html' },
+    { title: "Privacy Policy", href: '/documents/kebijakan-privasi.html' },
   ]
 
   return (
@@ -42,11 +39,11 @@ const Footer = () => {
           <div className='flex flex-col-reverse md:flex-row gap-8 items-center justify-between'>
             <p className='text-sm md:text-base text-center md:text-left'>Copyright &copy; AdQuest.id. 2024. All Rights Reserved.</p>
 
-            {/* <ul className='flex gap-10 md:gap-8 font-bold text-sm md:text-base'>
+            <ul className='flex gap-10 md:gap-8 font-bold text-sm md:text-base'>
               {footerLinks.map((x, index) => (
                 <li key={index}><Link href={x.href}>{x.title}</Link></li>
               ))}
-            </ul> */}
+            </ul>
           </div>
 
         </div>
