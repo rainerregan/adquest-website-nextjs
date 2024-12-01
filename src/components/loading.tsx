@@ -1,5 +1,5 @@
 import Image from "next/image"
-import egg from '../../public/images/egg.png';
+import egg from '../../public/egg.png';
 
 const Loading = () => {
   return (
