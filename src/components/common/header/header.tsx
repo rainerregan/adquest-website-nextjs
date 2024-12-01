@@ -14,9 +14,9 @@ const Header = () => {
   const pathname = usePathname()
 
   const headerMenu: HeaderMenuItem[] = [
-    { title: 'Products', link: '/' },
-    { title: 'Services', link: '/service' },
-    { title: 'About Us', link: '/about-us' },
+    { title: 'Produk', link: '/' },
+    { title: 'Jasa', link: '/service' },
+    { title: 'Tentang Kami', link: '/about-us' },
   ]
 
   return (
