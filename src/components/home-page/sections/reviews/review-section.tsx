@@ -60,11 +60,10 @@ const ReviewSection = () => {
   ]
 
   const containerRef = useRef<HTMLDivElement | null>(null)
-
   const scrollToCard = (direction: 'prev' | 'next') => {
     if (containerRef.current) {
       const container = containerRef.current
-      const scrollAmount = 500 // Width of one viewport
+      const scrollAmount = window.innerWidth < 768 ? 300 : 500 // Width of one viewport
       container.scrollBy({
         left: direction === 'next' ? scrollAmount : -scrollAmount,
         behavior: 'smooth',

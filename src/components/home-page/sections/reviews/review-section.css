@@ -9,7 +9,7 @@
   /* Internet Explorer 10+ */
   scrollbar-width: none;
   /* Firefox */
-  scroll-padding-inline-start: 200px;
+  scroll-padding-inline-start: 100px;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -20,7 +20,15 @@
 .scroll-item {
   scroll-snap-align: start;
   flex: 0 0 auto;
-  /* Ensure items do not shrink or grow */
   width: 500px;
-  /* Set a consistent width for the review card */
+}
+
+@media (max-width: 768px) {
+  .scroll-item {
+    width: 300px;
+  }
+
+  .scroll-container {
+    scroll-padding-inline-start: 24px;
+  }
 }

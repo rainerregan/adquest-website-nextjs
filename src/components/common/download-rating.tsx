@@ -21,6 +21,7 @@ const DownloadRating: React.FC<DownloadRatingProps> = ({
           alt='Google Play Download'
           fill
           objectFit='contain'
+          loading='eager'
           className='h-full w-full'
         />
       </Link>
