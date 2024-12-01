@@ -71,7 +71,7 @@ const GamesAvailableSection = () => {
 
         <div className='flex flex-col items-center gap-[50px]'>
           <h3 className='font-bold text-xl md:text-2xl text-center'>#BerkaryaUntukBangsa</h3>
-          <Button className='max-w-[200px] text-center'>Kumpulkan Eggs Sekarang</Button>
+          <Button href="https://play.google.com/store/apps/details?id=com.adquest.play&hl=id" className='max-w-[200px] text-center'>Kumpulkan Eggs Sekarang</Button>
         </div>
       </div>
     </div>

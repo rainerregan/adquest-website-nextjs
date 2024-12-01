@@ -87,7 +87,7 @@ const StepSection = () => {
             <p className='md:text-xl font-medium mb-8'>
               {steps[currentStep].description}
             </p>
-            <Button className='max-w-[200px] md:max-w-[250px] text-lg md:text-xl text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
+            <Button href="https://play.google.com/store/apps/details?id=com.adquest.play&hl=id" className='max-w-[200px] md:max-w-[250px] text-lg md:text-xl text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
           </div>
         </div>
 
