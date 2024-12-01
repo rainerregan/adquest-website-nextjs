@@ -23,7 +23,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ faq }) => {
     >
       {/* Title */}
       <div className='flex justify-between items-start p-[20px] md:p-[24px] hover:cursor-pointer' onClick={toggleAccordion}>
-        <h3 className='font-bold text-xl md:text-2xl'>{faq.question}</h3>
+        <h3 className='font-bold text-lg md:text-2xl'>{faq.question}</h3>
 
         <button>
           {isOpen ? (

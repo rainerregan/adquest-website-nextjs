@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Cta1Section = () => {
   return (
-    <div className=' flex items-center pt-[140px] lg:pt-[140px] relative'>
+    <div className=' flex items-center pt-[120px] pb-[80px] lg:pt-[140px] relative'>
       <div className="absolute w-full h-full overflow-hidden">
         <Image
           priority
@@ -23,7 +23,7 @@ const Cta1Section = () => {
 
       <div className='max-w-7xl mx-auto px-[0px] md:px-[48px] z-10 h-full flex flex-col-reverse lg:flex-row items-center lg:gap-[24px] text-white'>
         <div className='flex-1 w-full flex justify-center lg:justify-start'>
-          <div className='w-full sm:w-[500px] lg:w-full h-[500px] lg:h-[800px] relative translate-x-[-12%]'>
+          <div className='w-full sm:w-[500px] lg:w-full h-[400px] lg:h-[800px] relative translate-x-[-12%]'>
             <Image src={cta1Illustration} alt='cta 1 illustration' fill objectFit='contain' className='w-full h-full' />
           </div>
         </div>

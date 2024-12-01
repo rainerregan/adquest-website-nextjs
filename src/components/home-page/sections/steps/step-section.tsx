@@ -7,6 +7,7 @@ import Steps from '@/components/common/step/steps';
 import { AnimatePresence, motion } from 'motion/react';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
+import ControlButton from '../reviews/control-button';
 
 export interface Step {
   title: string;
@@ -48,6 +49,14 @@ const StepSection = () => {
     },
   ]
 
+  const nextStep = () => {
+    setCurrentStep((prevStep) => (prevStep + 1) % steps.length)
+  }
+
+  const prevStep = () => {
+    setCurrentStep((prevStep) => (prevStep - 1 + steps.length) % steps.length)
+  }
+
   // Change the current step, every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,31 +72,37 @@ const StepSection = () => {
           Main <span className='text-main-green'>dan Menangkan</span>
         </h2>
 
-        <div className='flex flex-col md:flex-row gap-[50px] items-center justify-between w-full mt-12 mb-[120px] md:mb-[150px]'>
+        <div className='flex flex-col md:flex-row gap-[24px] md:gap-[50px] items-center justify-between w-full md:mt-12 mb-[120px] md:mb-[150px]'>
           <div className='flex-1 h-fit' data-aos="fade-right">
-            <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} />
+            <Steps currentStep={currentStep} setCurrentStep={setCurrentStep} steps={steps.map(x => x.title)} className='hidden md:block' />
           </div>
 
-          <AnimatePresence mode='wait'>
-            <motion.div
-              key={currentStep}  // This ensures the animation triggers on state change
-              className="w-[280px] h-[600px]"
-            >
-              <Image
-                src={steps[currentStep].illustration}
-                alt="Illustration"
-                className="w-full h-full object-contain"
-                data-aos="fade-up"
-                loading='eager'
-              />
-            </motion.div>
-          </AnimatePresence>
+          <div className='flex items-center gap-[24px]'>
+            <ControlButton type='prev' disabled={false} onClick={() => prevStep()} className='text-main-black md:hidden' />
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={currentStep}  // This ensures the animation triggers on state change
+                initial={{ y: 50 }}
+                animate={{ y: 0 }}
+                className="w-[280px] h-[450px] md:h-[600px]"
+              >
+                <Image
+                  src={steps[currentStep].illustration}
+                  alt="Illustration"
+                  className="w-full h-full object-contain"
+                  loading='eager'
+                />
+              </motion.div>
+            </AnimatePresence>
+            <ControlButton type='next' disabled={false} onClick={() => nextStep()} className='text-main-black md:hidden' />
+          </div>
 
           <div className='flex-1' data-aos="fade-left">
-            <p className='md:text-xl font-medium mb-8'>
+            <h3 className='h5 !text-xl text-center mb-3'>{steps[currentStep].title}</h3>
+            <p className='md:text-xl font-medium mb-8 text-center md:text-left'>
               {steps[currentStep].description}
             </p>
-            <Button href="https://play.google.com/store/apps/details?id=com.adquest.play&hl=id" className='max-w-[200px] md:max-w-[250px] text-lg md:text-xl text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
+            <Button href="https://play.google.com/store/apps/details?id=com.adquest.play&hl=id" className='w-full py-4 md:py-2 md:max-w-[250px] text-lg md:text-xl text-center leading-tight'>Kumpulkan Eggs Sekarang!</Button>
           </div>
         </div>
 

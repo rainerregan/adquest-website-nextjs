@@ -7,6 +7,7 @@ interface StepsProps {
   currentStep: number;
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   steps: string[];
+  className?: string;
 }
 
 interface StepItemProps {
@@ -16,9 +17,9 @@ interface StepItemProps {
   onClick?: () => void;
 }
 
-const Steps: React.FC<StepsProps> = ({ currentStep, setCurrentStep, steps }) => {
+const Steps: React.FC<StepsProps> = ({ currentStep, setCurrentStep, steps, className }) => {
   return (
-    <div style={{ marginBottom: `${(steps.length - 1) * 50}px` }}>
+    <div style={{ marginBottom: `${(steps.length - 1) * 50}px` }} className={className}>
       {steps.map((step, index) => (
         <StepItem
           key={index}
