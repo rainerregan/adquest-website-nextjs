@@ -16,10 +16,10 @@ const Footer = () => {
 
           <div className=' flex flex-col md:flex-row gap-[50px] mb-[40px]'>
             {/* Left Side */}
-            <div className='w-full md:w-1/3 flex flex-col gap-[30px]'>
-              <div className='flex flex-col gap-8'>
+            <div className='w-full md:w-1/3 flex flex-col items-center md:items-start gap-[30px]'>
+              <div className='flex flex-col items-center md:items-start gap-8'>
                 <Image src={appLogoWhite} alt='App Logo' width={150} height={50} />
-                <p>AdQuest adalah aplikasi mobile yang memungkinkan para gamers memperoleh poin dengan memainkan game-game unggulan dan menukarkannya dengan uang tunai.</p>
+                <p className='text-center md:text-left'>AdQuest adalah aplikasi mobile yang memungkinkan para gamers memperoleh poin dengan memainkan game-game unggulan dan menukarkannya dengan uang tunai.</p>
               </div>
 
               {/* Google Play */}
