@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
   ...props
 }) => {
   return (
-    <div className='flex flex-col flex-1'>
+    <div className='flex-1'>
       <label htmlFor={props.id} className={twMerge(
         'text-sm mb-1 font-semibold',
         errorMessage ? 'text-red-500' : ''
@@ -25,10 +25,9 @@ const Input: React.FC<InputProps> = ({
         className={twMerge(
           'border border-gray-300 rounded-lg px-4 py-2',
           'focus:outline-none focus:border-main-green focus:ring-1 focus:ring-main-green',
-          'transition-all duration-200',
+          'transition-all duration-200 w-full',
           errorMessage ? 'border-red-500' : '',
           props.className,
-          'h-fit'
         )}
         {...useFormRegister}
       />
