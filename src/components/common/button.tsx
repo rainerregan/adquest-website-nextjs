@@ -7,32 +7,42 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   href?: string;
+  enableAnimation?: boolean;
+  buttonType?: 'link' | 'button';
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
   className,
   href,
+  enableAnimation = true,
+  buttonType = 'link'
 }) => {
   return (
     <motion.div
-      whileHover={{
+      whileHover={enableAnimation ? {
         scale: 1.1, // Slightly enlarges the button
         rotate: 2, // Bouncy shake effect
-      }}
-      initial={{
+      } : {}}
+      initial={enableAnimation ? {
         rotate: 0
-      }}
-      transition={{
+      } : {}}
+      transition={enableAnimation ? {
         type: 'spring',
         stiffness: 300,
         damping: 10, // Natural spring feel
         duration: 0.5, // Controls overall timing
-      }}
+      } : {}}
     >
-      <Link href={href ?? "/"} className={twMerge('px-4 py-2 block w-fit rounded-lg hover:cursor-pointer bg-main-green text-white font-bold', className)}>
-        {children}
-      </Link>
+      {buttonType === 'button' ? (
+        <button type='submit' className={twMerge('px-4 py-2 block w-fit rounded-lg hover:cursor-pointer bg-main-green text-white font-bold hover:opacity-80', className)}>
+          {children}
+        </button>
+      ) : (
+        <Link href={href ?? "/"} className={twMerge('px-4 py-2 block w-fit rounded-lg hover:cursor-pointer bg-main-green text-white font-bold', className)}>
+          {children}
+        </Link>
+      )}
     </motion.div>
   );
 };

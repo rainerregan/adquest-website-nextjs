@@ -16,7 +16,7 @@ const Header = () => {
   const headerMenu: HeaderMenuItem[] = [
     { title: 'Produk', link: '/' },
     { title: 'Jasa', link: '/service' },
-    // { title: 'Tentang Kami', link: '/about-us' },
+    { title: 'Tentang Kami', link: '/about-us' },
   ]
 
   return (
