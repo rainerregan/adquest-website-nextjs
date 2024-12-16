@@ -80,7 +80,7 @@ const MonetizationSectionItem: React.FC<MonetizationSectionItemProps> = ({
       <div className='flex-1 flex flex-col gap-10 text-center md:text-left items-center md:items-baseline'>
         <h5 className='h5 text-3xl md:!text-4xl text-main-green'>{item.title}</h5>
         <p className='text-sm md:text-base'>{item.description}</p>
-        <Button className='text-main-black'>Pelajari lebih lanjut</Button>
+        {/* <Button className='text-main-black'>Pelajari lebih lanjut</Button> */}
       </div>
 
       <div className='flex-1'>
