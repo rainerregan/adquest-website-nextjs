@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AdQuest | Aplikasi Penghasil Uang dari Mobile Games",
+  title: "AdQuest | Play, Earn, Shop – Level Up Loyalty Reward",
   description: "AdQuest adalah aplikasi penghasil uang dan penyedia mobile games seru yang disediakan gratis dan mudah untuk dimainkan.",
   icons: {
     icon: "/egg.png",

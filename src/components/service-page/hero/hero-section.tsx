@@ -1,3 +1,4 @@
+"use client"
 import { serviceHeroIllustration } from '@/components/common/illustration'
 import HeroContactForm from '@/components/contact/contact-form'
 import Image from 'next/image'
