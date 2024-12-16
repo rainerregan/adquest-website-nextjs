@@ -1,10 +1,11 @@
 import Image from "next/image"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
 import Input from "../common/input/input"
 import TextArea from "../common/input/textarea"
 import Button from "../common/button"
 import egg from '../../../public/egg.png'
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface ContactInputs {
   name: string
@@ -14,9 +15,39 @@ interface ContactInputs {
 }
 
 const HeroContactForm = () => {
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isVerified, setIsVerified] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+
+
+  async function handleCaptchaSubmission(token: string | null) {
+    try {
+      if (token) {
+        await fetch("/api/captcha", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        });
+        setIsVerified(true);
+      }
+    } catch (e) {
+      setIsVerified(false);
+    }
+  }
+
+  const handleChange = (token: string | null) => {
+    handleCaptchaSubmission(token);
+  };
+
+  function handleExpired() {
+    setIsVerified(false);
+  }
 
   const {
     register,
@@ -26,6 +57,11 @@ const HeroContactForm = () => {
   } = useForm<ContactInputs>()
 
   const onSubmit: SubmitHandler<ContactInputs> = async (data) => {
+    if (!isVerified) {
+      setErrorMessage('Please verify that you are not a robot.')
+      return
+    }
+    
     setIsLoading(true)
     const apiEndpoint = '/api/email';
 
@@ -90,9 +126,16 @@ const HeroContactForm = () => {
         useFormRegister={register("message", { required: true })}
         errorMessage={errors.message?.message}
       />
+      <ReCAPTCHA
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+        ref={recaptchaRef}
+        onChange={handleChange}
+        onExpired={handleExpired}
+      />
       <Button
         enableAnimation={false}
         buttonType='button'
+        disabled={!isVerified}
       >
         Kirim Pesan
       </Button>

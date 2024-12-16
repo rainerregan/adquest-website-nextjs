@@ -9,6 +9,7 @@ interface ButtonProps {
   href?: string;
   enableAnimation?: boolean;
   buttonType?: 'link' | 'button';
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,7 +17,8 @@ const Button: React.FC<ButtonProps> = ({
   className,
   href,
   enableAnimation = true,
-  buttonType = 'link'
+  buttonType = 'link',
+  disabled = false,
 }) => {
   return (
     <motion.div
@@ -35,7 +37,14 @@ const Button: React.FC<ButtonProps> = ({
       } : {}}
     >
       {buttonType === 'button' ? (
-        <button type='submit' className={twMerge('px-4 py-2 block w-fit rounded-lg hover:cursor-pointer bg-main-green text-white font-bold hover:opacity-80', className)}>
+        <button type='submit' className={
+          twMerge(
+            'px-4 py-2 block w-fit rounded-lg hover:cursor-pointer bg-main-green text-white font-bold',
+            disabled ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-80',
+            className,
+          )}
+          disabled={disabled}
+        >
           {children}
         </button>
       ) : (
