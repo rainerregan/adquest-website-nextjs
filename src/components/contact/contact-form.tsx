@@ -10,6 +10,7 @@ interface ContactInputs {
   name: string
   email: string
   message: string
+  publisher: string
 }
 
 const HeroContactForm = () => {
@@ -74,6 +75,14 @@ const HeroContactForm = () => {
           errorMessage={errors.email?.message}
         />
       </div>
+      <Input
+        label='Game Studio/Publisher'
+        type='text'
+        placeholder='e.g. My Game & Co.'
+        className='flex-1'
+        useFormRegister={register("publisher", { required: true })}
+        errorMessage={errors.email?.message}
+      />
       <TextArea
         label='Pesan Anda'
         placeholder='Masukkan pesan anda disini...'

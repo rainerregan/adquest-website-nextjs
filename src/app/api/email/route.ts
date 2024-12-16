@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     to: process.env.NOTIFICATION_EMAIL as string,
     subject: '(AdQuest.id) New Contact Notification',
     // react: EmailTemplate({ firstName: 'John' }),
-    html: createNotificationEmail(body.name, body.email, body.message),
+    html: createNotificationEmail(body.name, body.email, body.message, body.publisher),
   });
 
   if (error) {
